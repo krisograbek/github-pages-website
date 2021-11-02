@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     height: '96px',
     // paddingTop: '24px',
     borderLeft: 'solid 1px',
-    left: '12px'
+    left: '24px'
   }
 }));
 
@@ -31,6 +31,7 @@ function SidebarLeft() {
       direction="column"
       justifyContent="flex-end"
       alignContent="center"
+      alignItems="stretch"
       className={classes.container}
     >
       <ContactIcons />

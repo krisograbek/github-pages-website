@@ -73,7 +73,8 @@ function App() {
           direction="column"
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
-          <Grid container spacing={1}>
+          <Grid container
+          >
             <Grid item xs={1}>
               <SidebarLeft />
             </Grid>
@@ -83,7 +84,7 @@ function App() {
           </Grid>
         </Grid>
       </Paper>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 

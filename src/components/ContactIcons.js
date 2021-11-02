@@ -11,15 +11,31 @@ import FaStackOverflow from '@meronex/icons/fa/FaStackOverflow';
 import FaReddit from '@meronex/icons/fa/FaReddit';
 import makeStyles from '@mui/styles/makeStyles';
 
-const useStyles = makeStyles(() => ({
-  icon: {
-    fontSize: '24px',
-    marginTop: '16px'
-  },
-  box: {
-    marginBottom: '32px',
-  }
-}));
+const useStyles = makeStyles((theme) => {
+  const light = theme.palette.primary.light;
+  const dark = theme.palette.primary.dark;
+  const mode = theme.palette.mode;
+  return ({
+    icon: {
+      marginTop: '16px',
+      fontSize: '24px',
+    },
+    link: {
+      position: 'relative',
+      transition: 'top ease 0.2s',
+      top: 0,
+      "&:hover": {
+        color: mode === "dark" ? light : dark,
+        top: '-4px'
+      }
+    },
+    box: {
+      marginBottom: '32px',
+      width: '100%',
+      textAlign: 'center'
+    }
+  })
+});
 
 const links = [
   { "link": "https://www.linkedin.com/in/kris-ograbek-nlp/", "icon": FaLinkedin },
@@ -41,11 +57,11 @@ function ContactIcons() {
           <Grid
             key={id}
             item
-            className={classes.item}
           >
             {/* <Typography variant="body1" > */}
             <Link
               href={item.link}
+              className={classes.link}
               target="_blank"
               rel="noreferrer"
             >
