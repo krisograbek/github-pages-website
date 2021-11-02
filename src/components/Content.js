@@ -15,7 +15,8 @@ function Content() {
       item
       id="home"
       style={{
-        paddingTop: 32
+        paddingTop: 32,
+        paddingLeft: 16
       }}
     >
       <Grid container>
