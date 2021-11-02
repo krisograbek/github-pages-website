@@ -1,4 +1,3 @@
-
 import grey from '@mui/material/colors/grey';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -8,6 +7,8 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Content from './components/Content';
+import SidebarLeft from './components/SidebarLeft';
+
 
 
 const lightTheme = createTheme({
@@ -72,10 +73,18 @@ function App() {
           direction="column"
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
-          <Content />
+          <Grid container
+          >
+            <Grid item xs={1}>
+              <SidebarLeft />
+            </Grid>
+            <Grid item xs={10}>
+              <Content />
+            </Grid>
+          </Grid>
         </Grid>
       </Paper>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 
