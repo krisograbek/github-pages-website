@@ -1,45 +1,60 @@
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Link from '@mui/material/Link'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
+import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import React, { useState } from 'react'
 import makeStyles from '@mui/styles/makeStyles'
+import React, { useState } from 'react'
+import FaGithub from '@meronex/icons/fa/FaGithub'
 
-const useStyles = makeStyles((theme) => ({
-  card: {
-    marginTop: 32,
-    "&:hover": {
-      transform: "scale(1.02)",
-      transition: "transform ease 0.2s",
+const useStyles = makeStyles((theme) => {
+  const light = theme.palette.primary.light;
+  const dark = theme.palette.primary.dark;
+  const mode = theme.palette.mode;
+  return ({
+    card: {
+      marginTop: 32,
     },
-  },
-  title: {
-    paddingTop: 4,
-  },
-  subtitle: {
-    paddingTop: 4,
-    // fontSize: [18, "!important"],
-    fontWeight: [600, "!important"],
-  },
-  date: {
-    paddingBottom: 12
-  },
-  tags: {
-    padding: '8px 0 16px'
-  },
-  tag: {
-    border: 'solid 1px',
-    borderRadius: 6,
-    // the next 3 lines are to test preffered tagging
-    // borderColor: theme.palette.text.secondary,
-    // backgroundColor: theme.palette.text.secondary,
-    // color: `${theme.palette.background.default} !important`,
-    // marginLeft: 16,
-    padding: '2px 8px',
-  }
-}));
+    title: {
+      paddingTop: 4,
+    },
+    subtitle: {
+      paddingTop: 4,
+      // fontSize: [18, "!important"],
+      fontWeight: [600, "!important"],
+    },
+    date: {
+      paddingBottom: 12
+    },
+    tags: {
+      padding: '8px 0 16px'
+    },
+    tag: {
+      fontSize: [14, "!important"],
+      border: 'solid 1px',
+      borderRadius: 6,
+      // the next 3 lines are to test preffered tagging
+      // borderColor: theme.palette.text.secondary,
+      // backgroundColor: theme.palette.text.secondary,
+      // color: `${theme.palette.background.default} !important`,
+      // marginLeft: 16,
+      padding: '2px 8px',
+    },
+    icon: {
+      marginTop: '8px',
+      fontSize: '24px',
+    },
+    link: {
+      paddingRight: '12px',
+      cursor: 'pointer',
+      "&:hover": {
+        color: mode === "dark" ? light : dark,
+      },
+    },
+  })
+});
 
 function ArticleCard({ article }) {
   const classes = useStyles();
@@ -88,7 +103,18 @@ function ArticleCard({ article }) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      {/* <Typography>Links</Typography> */}
+      {article.githubLink &&
+        <Typography style={{ textAlign: 'right', }}>
+          <Link
+            href={article.githubLink}
+            className={classes.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub className={classes.icon} />
+          </Link>
+        </Typography>
+      }
     </Card>
   )
 }

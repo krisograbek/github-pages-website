@@ -12,6 +12,7 @@
         "imgSrc": "https://miro.medium.com/max/1110/1*EUAUZoHWRqVXzhlH8tspkA.png",
         "publishDate": "October 8, 2021",
         "tags": ["Python", "Machine Learning", "Scikit Learn", "Metrics"],
+        "githubLink": "https://github.com/krisograbek/cover-type",
         "publication": "Heartbeat"
     },
     {
@@ -26,6 +27,7 @@
         ],
         "imgSrc": "https://miro.medium.com/max/1400/0*9dH_9EAB3V1WVILd",
         "publishDate": "May 13, 2021",
+        "githubLink": "https://github.com/krisograbek/POS_Neighbors",
         "tags": ["Python", "NLP", "SpaCy"]
     },
     {
@@ -41,6 +43,7 @@
         ],
         "imgSrc": "https://miro.medium.com/max/3610/1*awG2b88LrXCvPwq0E_c2ug.png",
         "publishDate": "May 19, 2021",
+        "githubLink": "https://github.com/krisograbek/named_entities_intro",
         "tags": ["Python", "NLP", "SpaCy", "Named Entities"]
     },
     {
