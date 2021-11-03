@@ -10,19 +10,32 @@ import makeStyles from '@mui/styles/makeStyles'
 const useStyles = makeStyles((theme) => ({
   card: {
     marginTop: 32,
+    "&:hover": {
+      transform: "scale(1.02)",
+      transition: "transform ease 0.2s",
+    },
+  },
+  title: {
+    paddingTop: 4,
   },
   subtitle: {
-    paddingTop: 24
+    paddingTop: 4,
+    // fontSize: [18, "!important"],
+    fontWeight: [600, "!important"],
   },
   date: {
     paddingBottom: 12
   },
   tags: {
-    padding: '16px 0 24px'
+    padding: '8px 0 16px'
   },
   tag: {
     border: 'solid 1px',
     borderRadius: 6,
+    // the next 3 lines are to test preffered tagging
+    // borderColor: theme.palette.text.secondary,
+    // backgroundColor: theme.palette.text.secondary,
+    // color: `${theme.palette.background.default} !important`,
     // marginLeft: 16,
     padding: '2px 8px',
   }
@@ -58,7 +71,7 @@ function ArticleCard({ article }) {
           <Typography variant="h5" color={titleColor}>
             {article.title}
           </Typography>
-          <Typography variant="h6" className={classes.subtitle}>
+          <Typography className={classes.subtitle}>
             {article.subtitle}
           </Typography>
           <Grid container spacing={1} className={classes.tags}>
@@ -75,6 +88,7 @@ function ArticleCard({ article }) {
           </Typography>
         </CardContent>
       </CardActionArea>
+      {/* <Typography>Links</Typography> */}
     </Card>
   )
 }
