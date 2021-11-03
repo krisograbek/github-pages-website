@@ -1,0 +1,28 @@
+[
+    {
+        "appUrl": "https://iris-flask-react.herokuapp.com",
+        "githubUrl": "https://github.com/krisograbek/iris-fsml",
+        "title": "Full Stack Iris App",
+        "videoLink": "videos/iris.mp4",
+        "description": [
+            "The first ever Full Stack Machine Learning project I created. ",
+            "My goal was to connect all the dots required to make it work"
+        ],
+        "tags": "machine learning, full stack", 
+        "techStack": "Python, JavaScript, React, Flask, Scikit-learn, Heroku"
+    },
+    {
+        "appUrl": "https://krisograbek-hotdog.herokuapp.com",
+        "githubUrl": "https://github.com/krisograbek/hotdog",
+        "title": "Hot dog Challenge",
+        "videoLink": "videos/hotdog.mp4",
+        "description": [
+            "The second Full Stack Machine Learning project I built. This time I trained a Deep Learning model.",
+            "I wanted to take it one step further. ",
+            "It turned out to be several steps. Deploying Deep Learning models on Heroku is a different type of beast. ",
+            "I faced multiple memory issues. "
+        ],
+        "tags": "deep learning, full stack, transfer learning", 
+        "techStack": "Python, JavaScript, React, Flask, Tensorflow, Heroku"
+    }
+]

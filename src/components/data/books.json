@@ -1,0 +1,145 @@
+{
+    "Data Science": [
+        {
+            "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+            "link": "link1",
+            "author": "Aurelion Geron",
+            "authorLink": "",
+            "description": "",
+            "impact": "In my opinion, this book is the most comprehensive single resource to learn Machine Learning"
+        },
+        {
+            "title": "Deep Learning Illustrated",
+            "link": "link1",
+            "author": "Jon Krohn",
+            "authorLink": "https://www.linkedin.com/in/jonkrohn/",
+            "description": "",
+            "impact": [
+                "Jon is a walking inspiration. He is an outstanding teacher. Simply explaining complex ",
+                "terms seems natural to him. He knows how to touch the surface to give a big picture. But it's only ",
+                "possible because he has a deep understanding of the topics that he teaches. A must-read book if you're into deep learning." 
+            ]
+        },
+        {
+            "title": "Approaching (Almost) Any Machine Learning Problem",
+            "link": "link2",
+            "author": "Abhishek Thakur",
+            "authorLink": "https://www.linkedin.com/in/abhi1thakur/",
+            "description": "",
+            "impact": "Very Hands-On. Abhishek's fluency is out of any scale. You should check out his YouTube channel"
+        }
+    ],
+    "Personal Growth": [
+        {
+            "title": "Seven Habits of Highly Effective People",
+            "link": "link3",
+            "author": "Stephen R. Covey",
+            "authorLink": "",
+            "description": "",
+            "impact": "Personal #1. The book helped me redefining Independence. I learned the word \"proactive\" which became a life-changer.",
+            "topQuotes": [
+                "We see the world, not as it is, but as we are ─ or, as we are conditioned to see it.",
+                "If I really want to improve my situation, I can work on the one thing over which I have control - myself.",
+                "Happiness, like unhappiness, is a proactive choice."
+            ]
+        },
+        {
+            "title": "How to Win Friends & Influence People",
+            "link": "link3",
+            "author": "Dale Carnegie",
+            "authorLink": "",
+            "description": "",
+            "impact": [
+                "Personal #1. Made me realize my life far from an independent one. I learned the word \"proactive\" which became a life-changer. ",
+                "Thanks to the book"
+            ],
+            "topQuotes": [
+                "To be interesting, be interested.",
+                "Only knowledge that is used sticks in your mind.",
+                "There is only one way to get the best of an argument -- and that is to avoid it."
+            ]
+        },
+        {
+            "title": "How Will You Measure Your Life?",
+            "link": "link3",
+            "author": "Clayton M. Christensen",
+            "authorLink": "",
+            "description": "",
+            "impact": [
+                "I realized my work was only a source of income. I felt unhappy, unfulfilled. There wasn't any personal meaning in the tasks I did. ",
+                "My job stole the time and energy. I desired to quit. ASAP. I'm not talking about changing jobs. It's about becoming unemployed. ",
+                "However, it's never easy. I didn't want to be a quitter. What will people think? ",
+                "What about future interviews? How do I get away with such a decision? "
+            ],
+            "topQuotes": [
+                "The only way to do great work is to love what you do. ",
+                "The opposite of job dissatisfaction isn't job satisfaction, but rather an absence of job dissatisfaction. ",
+                "Better sallaries. A more prestigious title. A nicer office They are, after all, what our friends and family see as signs, that we have \"made it\" professionally. "
+            ]
+        },
+        {
+            "title": "You Are a Badass",
+            "link": "link4",
+            "author": "Jen Sincero",
+            "authorLink": "",
+            "description": "",
+            "impact": [
+                "Awesome book. I love it. Almost every single page contains a gem. It can be either a sentence, or a quote, or a whole passage.", 
+                "I'm limited to five quotations per book. For this book, I could write at least fifty that made me stop and think. ",
+                "When I started reading the book, I thought it wasn't about me. I thought I was \"over it.\" ",
+                "I thought: \"What a great book for people who want to change their lives but don't know where to start. But I'm not there anymore. ",
+                "I'm already in the process.\" I thought I knew the stuff.  ",
+                "This book made me realize how wrong I was. I didn't know the crap about being a badass. I still don't. ",
+                "I still shit my pants when things get uncomfortable. Making decent money is another difficulty for me."
+            ],
+            "topQuotes": [
+                "Our thoughts are the most powerful tools we've got. ",
+                "Comparision is the fastest way to take all the fun out of life",
+                "Do not waste your precious time giving one single crap about what anybody else thinks of you. ",
+                "What other people think about you has nothing to do with you and everything to do with them. "
+            ]
+        }
+    ],
+    "Financial Literacy": [
+        {
+            "title": "The Psychology of Money",
+            "link": "link3",
+            "author": "Morhan Housel",
+            "authorLink": "",
+            "description": [
+                "Do you know what is the difference between a rich and a wealthy person? I do! ",
+                "A must-read in the world of capitalism. "
+            ],
+            "impact": [
+                "I read this book in the Summer 2021. At the time, I was escaping the 9-5. It resonated with me at a high level.  ",
+                "Saving money is crucial. Save money to buy freedom. Save money to take control over your time. ",
+                "Doing what you want, when you want it, with people you want is one of the biggests assets one can have in the modern world."
+            ],
+            "topQuotes": [
+                "Controlling your time is the highest divident money pays. ",
+                "Wealth is what you don't see. ",
+                "Spending money to show people how much money you have is the fastest way to have less money. ",
+                "Modern capitalism is a pro at two things: generating wealth and generating envy. ",
+                "Money's greatest intrinsic value - and this can't be overstatet - is its ability to give you control over your time. ",
+                "Someone driving a $100,000 car might be wealthy. But the only data point you have about their wealth they have $100,000 less than they did before they bought the car. "
+            ]
+        },
+        {
+            "title": "The Intelligent Investor",
+            "link": "link3",
+            "author": "Benjamin Graham",
+            "authorLink": "",
+            "description": "",
+            "impact": [
+                "In the beginning of 2020, I started educating myself about finance. It is the first book about money I bought. ",
+                "While reading I realized I wanted to be a passive investor. Since I want to do this long-term, I should invest in index funds. ", 
+                "And this is what I ended up doing. "
+            ],
+            "topQuotes": [
+                "Poeple who invest make money for themselves; people who speculate make money for their brokers.",
+                "The intelligent investor is the realist who sells to optimists and buys from pessimists. ",
+                "While enthusiasm may be necessary for great accomplishments elsewhere, on Wall Street it almost invariably leads to disaster. "
+            ]
+        }
+    ]
+}
