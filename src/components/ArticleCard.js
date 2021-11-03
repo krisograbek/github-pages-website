@@ -62,8 +62,6 @@ function ArticleCard({ article }) {
 
   const titleColor = highlight ? "primary" : "textSecondary"
 
-  console.log(highlight)
-
   return (
     <Card elevation={4} className={classes.card}>
       <CardActionArea
