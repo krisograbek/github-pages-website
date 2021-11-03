@@ -48,16 +48,29 @@ const darkTheme = createTheme({
   typography: {
     h4: {
       color: '#fff'
-    }
+    },
+    h2Big: {
+      color: '#fff',
+      fontSize: 48,
+      fontWeight: 900
+    },
+    h3Big: {
+      fontSize: 40,
+      fontWeight: 700
+    },
+    spanWhiteBold: {
+      color: '#fff',
+      fontWeight: 800
+    },
   }
 });
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     minHeight: '100vh',
     padding: 20
   }
-}));
+});
 
 function App() {
   const classes = useStyles();
