@@ -1,8 +1,7 @@
 import Typography from '@mui/material/Typography'
 import Card from '@mui/material/Card'
-import Link from '@mui/material/Link'
-import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
 import CardActionArea from '@mui/material/CardActionArea'
 import React from 'react'
 
@@ -14,10 +13,26 @@ function ArticleCard({ article }) {
         target="_blank"
         rel="noreferrer"
       >
-        <CardHeader
-          title={article.title}
+        <CardMedia
+          component="img"
+          height="256"
+          image={article.imgSrc}
+          alt="article image"
         />
         <CardContent>
+          <Typography>
+            {article.publishDate}
+          </Typography>
+          <Typography variant="h5" color="textSecondary">
+            {article.title}
+          </Typography>
+          <Typography>
+            {article.subtitle}
+          </Typography>
+          {/* <CardHeader
+          title={article.title}
+          subheader={article.subtitle}
+        /> */}
           <Typography>
             {article.description}
           </Typography>
