@@ -2,7 +2,7 @@
     {
         "link": "https://heartbeat.comet.ml/cost-sensitive-learning-for-imbalanced-data-93370404a54b",
         "title": "Cost-sensitive Learning for Imbalanced Data",
-        "subtitle": "Improving classification model performance on underrepresented classes",
+        "subtitle": "Improve classification model performance on underrepresented classes",
         "description": [
             "Imbalanced data is a common yet challenging problem in Machine Learning. ",
             "Multi-class classification adds another level of complexity. ",
@@ -16,7 +16,7 @@
     },
     {
         "link": "https://kris-ograbek-nlp.medium.com/pay-attention-to-your-neighbors-a-simple-approach-to-the-part-of-speech-tagging-f8aa4af0b313",
-        "title": "Pay Attention to Your Neighbors",
+        "title": "Pay Attention to Your Neighbors. A Simple Approach to the Part Of Speech Tagging",
         "subtitle": "Know the word by its company",
         "description": [
             "An article about human language. I wrote about challenges of understanding the human language. ",
