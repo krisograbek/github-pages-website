@@ -17,12 +17,14 @@ const useStyles = makeStyles((theme) => {
     card: {
       marginTop: 32,
     },
+    img: {
+      filter: 'grayscale(100%)'
+    },
     title: {
       paddingTop: 4,
     },
     subtitle: {
       paddingTop: 4,
-      // fontSize: [18, "!important"],
       fontWeight: [600, "!important"],
     },
     date: {
@@ -72,6 +74,7 @@ function ArticleCard({ article }) {
         onMouseOut={() => setHighlight(false)}
       >
         <CardMedia
+          className={classes.img}
           component="img"
           height="256"
           image={article.imgSrc}
