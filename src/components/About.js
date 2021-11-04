@@ -56,7 +56,6 @@ function About() {
             item
             xs={12} md={6}
             textAlign="center"
-          // className={classes.photo}
           >
             <Box
               component="img"

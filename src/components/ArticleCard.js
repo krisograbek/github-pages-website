@@ -1,13 +1,13 @@
+import FaGithub from '@meronex/icons/fa/FaGithub'
 import Card from '@mui/material/Card'
-import Link from '@mui/material/Link'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Grid from '@mui/material/Grid'
+import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import makeStyles from '@mui/styles/makeStyles'
 import React, { useState } from 'react'
-import FaGithub from '@meronex/icons/fa/FaGithub'
 
 const useStyles = makeStyles((theme) => {
   const light = theme.palette.primary.light;
@@ -18,7 +18,11 @@ const useStyles = makeStyles((theme) => {
       marginTop: 32,
     },
     img: {
-      filter: 'grayscale(100%)'
+      filter: 'grayscale(100%)',
+      width: '90%',
+      aspectRatio: '4 / 3',
+      "&:hover": {
+      },
     },
     title: {
       paddingTop: 4,
@@ -76,7 +80,7 @@ function ArticleCard({ article }) {
         <CardMedia
           className={classes.img}
           component="img"
-          height="256"
+
           image={article.imgSrc}
           alt="article image"
         />

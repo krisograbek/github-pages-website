@@ -62,7 +62,7 @@ function ProjectStack({ list }) {
   const stackList = list.split(',');
   return (
     <Grid container spacing={1} className={classes.stack}>
-      {stackList.map((tag, id) => (
+      {stackList.map((item, id) => (
         <Grid item key={id} xs={6} >
           <Box> &#9702;
             <Typography
@@ -70,7 +70,7 @@ function ProjectStack({ list }) {
               style={{ paddingLeft: 20 }}
             >
               {/* remove leading and trailing spaces */}
-              {tag.trim()}
+              {item.trim()}
             </Typography>
           </Box>
         </Grid>
