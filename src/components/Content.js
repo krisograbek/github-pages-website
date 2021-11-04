@@ -13,8 +13,8 @@ import ScrollTop from './ScrollTop'
 const sections = [
   <Intro />,
   <About />,
-  <Blog />,
   <Projects />,
+  <Blog />,
   <Contact />
 ]
 

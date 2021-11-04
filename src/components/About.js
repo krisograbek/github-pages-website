@@ -80,7 +80,7 @@ function About() {
                 <Typography>
                   Welcome, my name is
                   <Typography variant="spanWhiteBold"> Kris Ograbek </Typography>.
-                  Actually, it's Krzysztof but people get very creative when it comes to misspelling my name.
+                  OK, my real name is Krzysztof but people get very creative when it comes to misspelling it.
                   So, feel free to call me Kris.
                 </Typography>
               </Grid>
