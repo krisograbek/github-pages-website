@@ -1,4 +1,5 @@
 import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import React from 'react'
 import makeStyles from '@mui/styles/makeStyles'
@@ -13,11 +14,12 @@ const useStyles = makeStyles(({
   },
   paragraph: {
     paddingBottom: 24,
+    width: '90%',
+    // textAlign: 'center'
   },
   photo: {
     width: 256,
     height: 256,
-    backgroundColor: "blue",
   }
 }))
 
@@ -35,9 +37,9 @@ function About() {
       >
         <Grid container>
           {/* empty grid to push About above description */}
-          <Grid item xs={6} />
-          <Grid item xs={6}>
-            <Typography variant="h4" component="h2">
+          {/* <Grid item xs={6} /> */}
+          <Grid item xs={12}>
+            <Typography variant="h4" component="h2" textAlign="center">
               About
             </Typography>
           </Grid>
@@ -52,13 +54,26 @@ function About() {
         >
           <Grid
             item
-            // xs={4}
-            className={classes.photo}
+            xs={12} md={6}
+            textAlign="center"
+          // className={classes.photo}
           >
-            Here comes a photo
+            <Box
+              component="img"
+              sx={{
+                width: '90%',
+                aspectRatio: 'auto'
+                // maxHeight: { xs: 256, sm: 320, lg: 400 },
+                // maxWidth: { xs: 256, sm: 320, lg: 400 },
+              }}
+              alt="The house from the offer."
+              src="images/meGray.JPG"
+            />
           </Grid>
-          <Grid item xs={6}>
-            <Grid container>
+          <Grid item xs={12} md={6}>
+            <Grid container
+              justifyContent="center"
+            >
               <Grid item
                 className={classes.paragraph}
               >
