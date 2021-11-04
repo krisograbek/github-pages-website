@@ -1,3 +1,4 @@
+import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import Link from '@mui/material/Link'
 import CardActionArea from '@mui/material/CardActionArea'
@@ -63,9 +64,15 @@ function ProjectStack({ list }) {
     <Grid container spacing={1} className={classes.stack}>
       {stackList.map((tag, id) => (
         <Grid item key={id} xs={6} >
-          <Typography variant="spanWhiteBold">
-            &bull; {tag}
-          </Typography>
+          <Box> &#9702;
+            <Typography
+              variant="spanWhiteBold"
+              style={{ paddingLeft: 20 }}
+            >
+              {/* remove leading and trailing spaces */}
+              {tag.trim()}
+            </Typography>
+          </Box>
         </Grid>
       ))
       }

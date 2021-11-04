@@ -60,7 +60,7 @@ const darkTheme = createTheme({
     },
     spanWhiteBold: {
       color: '#fff',
-      fontWeight: 800
+      fontWeight: 600
     },
   }
 });
