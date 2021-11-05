@@ -8,7 +8,7 @@ import ContactIcons from './ContactIcons';
 const useStyles = makeStyles((theme) => ({
   container: {
     position: "fixed",
-    width: '50px',
+    // width: '50px',
     bottom: '0px',
     right: 'auto',
     zIndex: 2,
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     height: '96px',
     // paddingTop: '24px',
-    borderLeft: 'solid 1px',
+    // borderLeft: 'solid 1px',
     left: '24px'
   }
 }));
@@ -31,7 +31,7 @@ function SidebarLeft() {
       direction="column"
       justifyContent="flex-end"
       alignContent="center"
-      alignItems="stretch"
+      // alignItems="stretch"
       className={classes.container}
     >
       <ContactIcons />

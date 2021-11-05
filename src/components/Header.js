@@ -1,6 +1,6 @@
-import Brightness3Outlined from '@mui/icons-material/Brightness3Outlined';
+import Brightness4 from '@mui/icons-material/Brightness4';
 import MenuIcon from '@mui/icons-material/Menu';
-import WbSunnyOutlined from '@mui/icons-material/WbSunnyOutlined';
+import WbSunny from '@mui/icons-material/WbSunny';
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
@@ -8,7 +8,6 @@ import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Slide from '@mui/material/Slide';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -16,14 +15,17 @@ import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
 
-const useStyles = makeStyles({
-  navItems: {
-    flexGrow: 1
+const useStyles = makeStyles((theme) => ({
+  container: {
+    padding: '8px 0'
   },
-  logo: {
-    padding: '0 16px'
-  }
-});
+  menuLink: {
+    fontSize: '16px',
+    "&:hover": {
+      color: theme.palette.primary.light
+    }
+  },
+}));
 
 const menuItems = [
   { link: "#about", name: "about" },
@@ -33,6 +35,7 @@ const menuItems = [
 ]
 
 function MobileNavbar() {
+  const classes = useStyles();
   const [anchor, setAnchor] = useState(null);
   const open = Boolean(anchor)
 
@@ -66,7 +69,8 @@ function MobileNavbar() {
           return (
             <Link
               key={name}
-              color="primary"
+              underline="hover"
+              className={classes.menuLink}
               href={link}
               onClick={() => setAnchor(null)}
             >
@@ -83,16 +87,18 @@ function MobileNavbar() {
 }
 
 function DesktopNavbar() {
+  const classes = useStyles();
   return (
     <Grid
       container
-      spacing={2}
       justifyContent="flex-end"
     >
       {menuItems.map(({ link, name }) => {
         return (
-          <Grid item>
-            <Link href={link}>
+          <Grid item style={{ paddingLeft: 16 }}>
+            <Link href={link}
+              underline="hover"
+              className={classes.menuLink}>
               {name}
             </Link>
           </Grid>
@@ -104,49 +110,59 @@ function DesktopNavbar() {
 
 function Header(props) {
   const { themeMode, setThemeMode } = props;
-  const { navItems, logo } = useStyles();
+  const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const trigger = useScrollTrigger();
 
-  const Icon = themeMode ? WbSunnyOutlined : Brightness3Outlined;
+  const Icon = themeMode ? WbSunny : Brightness4;
 
   return (
     <Grid item>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar position="fixed" color="default">
-          <Toolbar>
-            <Link variant="h6"
-              className={logo}
-              color="primary"
-              href="#"
+          <Grid container
+            className={classes.container}
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Grid item xs={1}
+              textAlign="center"
             >
-              LOGO
-            </Link>
-            <Typography
-              className={navItems}
-              variant="h6"
-            >
-              {isMobile ?
-                <MobileNavbar />
-                :
-                <DesktopNavbar />
-              }
-            </Typography>
-            <Typography
-              style={{ paddingLeft: 20 }}
-            >
-              <IconButton
-                edge="end"
+              <Link variant="h6"
                 color="primary"
-                size="small"
-                aria-label="mode"
-                onClick={() => setThemeMode(!themeMode)}
+                href="#"
               >
-                <Icon fontSize="medium" />
-              </IconButton>
-            </Typography>
-          </Toolbar>
+                KO
+              </Link>
+            </Grid>
+            <Grid item xs={10}>
+              <Typography
+                variant="h6"
+              >
+                {isMobile ?
+                  <MobileNavbar />
+                  :
+                  <DesktopNavbar />
+                }
+              </Typography>
+            </Grid>
+            <Grid item xs={1}>
+              <Typography
+                textAlign="center"
+              >
+                <IconButton
+                  edge="end"
+                  color="primary"
+                  size="small"
+                  aria-label="mode"
+                  onClick={() => setThemeMode(!themeMode)}
+                >
+                  <Icon fontSize="small" />
+                </IconButton>
+              </Typography>
+            </Grid>
+          </Grid>
         </AppBar>
       </Slide>
     </Grid >

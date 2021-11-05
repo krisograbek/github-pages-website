@@ -1,7 +1,7 @@
 import grey from '@mui/material/colors/grey';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import { useState } from 'react';
 import './App.css';
@@ -9,7 +9,26 @@ import Header from './components/Header';
 import Content from './components/Content';
 import SidebarLeft from './components/SidebarLeft';
 
-
+const applyCommonTheme = theme => createTheme(theme, {
+  typography: {
+    h4: {
+      color: theme.palette.text.secondary
+    },
+    h2Big: {
+      color: theme.palette.text.secondary,
+      fontSize: 'clamp(2rem, 8vw, 3rem)',
+      fontWeight: 900,
+    },
+    h3Big: {
+      fontSize: 'clamp(2rem, 8vw, 3rem)',
+      fontWeight: 700,
+    },
+    spanBold: {
+      color: theme.palette.text.secondary,
+      fontWeight: 600
+    },
+  }
+});
 
 const lightTheme = createTheme({
   palette: {
@@ -17,18 +36,12 @@ const lightTheme = createTheme({
       light: '#00958b',
       main: '#00796d',
       dark: '#004d40',
-      contrastText: '#fff',
     },
     text: {
       primary: grey[700],
       secondary: '#000'
     }
   },
-  typography: {
-    h4: {
-      color: '#000'
-    }
-  }
 });
 
 const darkTheme = createTheme({
@@ -38,44 +51,26 @@ const darkTheme = createTheme({
       light: '#a9dfdd',
       main: '#6ccbc7',
       dark: '#00a69e',
-      contrastText: '#fff',
     },
     text: {
       primary: grey[400],
       secondary: '#fff'
     }
   },
-  typography: {
-    h4: {
-      color: '#fff'
-    },
-    h2Big: {
-      color: '#fff',
-      fontSize: 48,
-      fontWeight: 900
-    },
-    h3Big: {
-      fontSize: 40,
-      fontWeight: 700
-    },
-    spanWhiteBold: {
-      color: '#fff',
-      fontWeight: 800
-    },
-  }
 });
 
 const useStyles = makeStyles({
   root: {
     minHeight: '100vh',
-    padding: 20
   }
 });
 
 function App() {
   const classes = useStyles();
   const [themeMode, setThemeMode] = useState(true);
-  const theme = themeMode ? darkTheme : lightTheme;
+  let theme = themeMode ? darkTheme : lightTheme;
+  theme = applyCommonTheme(theme);
+  theme = responsiveFontSizes(theme);
 
 
   return (
@@ -87,6 +82,8 @@ function App() {
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
           <Grid container
+
+          // justifyContent="space-between"
           >
             <Grid item xs={1}>
               <SidebarLeft />

@@ -7,7 +7,7 @@ import ProjectCard from './ProjectCard';
 
 const useStyles = makeStyles(({
   item: {
-    paddingTop: 64,
+    // paddingTop: 64,
     marginTop: 16,
   }
 }))
@@ -19,10 +19,30 @@ function Projects() {
     <Grid id="projects" container>
       <Grid item
         className={item}
+        xs={12}
       >
-        <Typography variant="h4" component="h2">
-          Projects
-        </Typography>
+        <Grid container
+          justifyContent="space-between"
+        >
+          <Grid
+            item xs={3}
+            alignSelf="center"
+            textAlign="right"
+          >
+            <hr />
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="h4" component="h2" textAlign="center">
+              Projects
+            </Typography>
+          </Grid>
+          <Grid
+            item xs={3}
+            alignSelf="center"
+          >
+            <hr />
+          </Grid>
+        </Grid>
       </Grid>
       <Grid item>
         <Grid container spacing={2}>

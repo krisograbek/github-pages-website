@@ -23,15 +23,10 @@ const useStyles = makeStyles(({
     paddingLeft: 16
   },
   contentSection: {
-    paddingTop: 160,
+    paddingTop: 120,
   },
   paragraph: {
     paddingTop: 24,
-  },
-  photo: {
-    maxWidth: 320,
-    maxHeight: 320,
-    backgroundColor: "blue",
   }
 }))
 
@@ -40,7 +35,7 @@ function Content() {
 
   return (
     <Grid item className={classes.content}>
-      <Grid container >
+      <Grid container alignContent="stretch">
         {sections.map((section) => {
           return (
             <Grid item className={classes.contentSection}>
