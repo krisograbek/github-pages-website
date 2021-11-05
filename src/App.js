@@ -10,14 +10,13 @@ import Content from './components/Content';
 import SidebarLeft from './components/SidebarLeft';
 
 
-
 const lightTheme = createTheme({
   palette: {
     primary: {
       light: '#00958b',
       main: '#00796d',
       dark: '#004d40',
-      contrastText: '#fff',
+      // contrastText: '#000',
     },
     text: {
       primary: grey[700],
@@ -27,7 +26,20 @@ const lightTheme = createTheme({
   typography: {
     h4: {
       color: '#000'
-    }
+    },
+    h2Big: {
+      color: '#000',
+      fontSize: 48,
+      fontWeight: 900
+    },
+    h3Big: {
+      fontSize: 40,
+      fontWeight: 700
+    },
+    spanWhiteBold: {
+      color: '#000',
+      fontWeight: 600
+    },
   }
 });
 
@@ -38,7 +50,7 @@ const darkTheme = createTheme({
       light: '#a9dfdd',
       main: '#6ccbc7',
       dark: '#00a69e',
-      contrastText: '#fff',
+      // contrastText: '#fff',
     },
     text: {
       primary: grey[400],
