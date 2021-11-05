@@ -1,7 +1,7 @@
 import grey from '@mui/material/colors/grey';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import { useState } from 'react';
 import './App.css';
@@ -29,12 +29,12 @@ const lightTheme = createTheme({
     },
     h2Big: {
       color: '#000',
-      fontSize: 48,
-      fontWeight: 900
+      fontSize: 'clamp(2rem, 8vw, 3rem)',
+      fontWeight: 900,
     },
     h3Big: {
-      fontSize: 40,
-      fontWeight: 700
+      fontSize: 'clamp(2rem, 8vw, 3rem)',
+      fontWeight: 700,
     },
     spanWhiteBold: {
       color: '#000',
@@ -63,12 +63,12 @@ const darkTheme = createTheme({
     },
     h2Big: {
       color: '#fff',
-      fontSize: 48,
-      fontWeight: 900
+      fontWeight: 900,
+      fontSize: 'clamp(2rem, 8vw, 3rem)',
     },
     h3Big: {
-      fontSize: 40,
-      fontWeight: 700
+      fontSize: 'clamp(2rem, 8vw, 3rem)',
+      fontWeight: 700,
     },
     spanWhiteBold: {
       color: '#fff',
@@ -87,7 +87,8 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   const [themeMode, setThemeMode] = useState(true);
-  const theme = themeMode ? darkTheme : lightTheme;
+  let theme = themeMode ? darkTheme : lightTheme;
+  theme = responsiveFontSizes(theme);
 
 
   return (
