@@ -62,7 +62,7 @@ const darkTheme = createTheme({
 const useStyles = makeStyles({
   root: {
     minHeight: '100vh',
-    padding: 20
+    // padding: 20
   }
 });
 
@@ -83,6 +83,7 @@ function App() {
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
           <Grid container
+            justifyContent="space-between"
           >
             <Grid item xs={1}>
               <SidebarLeft />

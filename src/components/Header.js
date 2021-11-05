@@ -18,10 +18,10 @@ import React, { useState } from 'react';
 
 const useStyles = makeStyles({
   navItems: {
-    flexGrow: 1
+    // flexGrow: 1
   },
   logo: {
-    padding: '0 16px'
+    // padding: '0 16px'
   }
 });
 
@@ -86,12 +86,12 @@ function DesktopNavbar() {
   return (
     <Grid
       container
-      spacing={2}
+      // spacing={2}
       justifyContent="flex-end"
     >
       {menuItems.map(({ link, name }) => {
         return (
-          <Grid item>
+          <Grid item style={{ paddingLeft: 12 }}>
             <Link href={link}>
               {name}
             </Link>
@@ -115,38 +115,52 @@ function Header(props) {
     <Grid item>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar position="fixed" color="default">
-          <Toolbar>
-            <Link variant="h6"
-              className={logo}
-              color="primary"
-              href="#"
+          {/* <Toolbar> */}
+          <Grid container
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Grid item xs={1}
+              textAlign="center"
+            // alignSelf="center"
             >
-              LOGO
-            </Link>
-            <Typography
-              className={navItems}
-              variant="h6"
-            >
-              {isMobile ?
-                <MobileNavbar />
-                :
-                <DesktopNavbar />
-              }
-            </Typography>
-            <Typography
-              style={{ paddingLeft: 20 }}
-            >
-              <IconButton
-                edge="end"
+              <Link variant="h6"
+                className={logo}
                 color="primary"
-                size="small"
-                aria-label="mode"
-                onClick={() => setThemeMode(!themeMode)}
+                href="#"
               >
-                <Icon fontSize="medium" />
-              </IconButton>
-            </Typography>
-          </Toolbar>
+                KO
+              </Link>
+            </Grid>
+            <Grid item xs={10}>
+              <Typography
+                className={navItems}
+                variant="h6"
+              >
+                {isMobile ?
+                  <MobileNavbar />
+                  :
+                  <DesktopNavbar />
+                }
+              </Typography>
+            </Grid>
+            <Grid item xs={1}>
+              <Typography
+                textAlign="center"
+              >
+                <IconButton
+                  edge="end"
+                  color="primary"
+                  size="small"
+                  aria-label="mode"
+                  onClick={() => setThemeMode(!themeMode)}
+                >
+                  <Icon fontSize="medium" />
+                </IconButton>
+              </Typography>
+            </Grid>
+            {/* </Toolbar> */}
+          </Grid>
         </AppBar>
       </Slide>
     </Grid >
