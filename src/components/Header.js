@@ -1,6 +1,6 @@
-import Brightness3Outlined from '@mui/icons-material/Brightness3Outlined';
+import Brightness4 from '@mui/icons-material/Brightness4';
 import MenuIcon from '@mui/icons-material/Menu';
-import WbSunnyOutlined from '@mui/icons-material/WbSunnyOutlined';
+import WbSunny from '@mui/icons-material/WbSunny';
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
@@ -8,7 +8,6 @@ import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Slide from '@mui/material/Slide';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -17,12 +16,9 @@ import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
 
 const useStyles = makeStyles({
-  navItems: {
-    // flexGrow: 1
+  container: {
+    padding: '8px 0'
   },
-  logo: {
-    // padding: '0 16px'
-  }
 });
 
 const menuItems = [
@@ -86,7 +82,6 @@ function DesktopNavbar() {
   return (
     <Grid
       container
-      // spacing={2}
       justifyContent="flex-end"
     >
       {menuItems.map(({ link, name }) => {
@@ -104,28 +99,26 @@ function DesktopNavbar() {
 
 function Header(props) {
   const { themeMode, setThemeMode } = props;
-  const { navItems, logo } = useStyles();
+  const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const trigger = useScrollTrigger();
 
-  const Icon = themeMode ? WbSunnyOutlined : Brightness3Outlined;
+  const Icon = themeMode ? WbSunny : Brightness4;
 
   return (
     <Grid item>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar position="fixed" color="default">
-          {/* <Toolbar> */}
           <Grid container
+            className={classes.container}
             justifyContent="space-between"
             alignItems="center"
           >
             <Grid item xs={1}
               textAlign="center"
-            // alignSelf="center"
             >
               <Link variant="h6"
-                className={logo}
                 color="primary"
                 href="#"
               >
@@ -134,7 +127,6 @@ function Header(props) {
             </Grid>
             <Grid item xs={10}>
               <Typography
-                className={navItems}
                 variant="h6"
               >
                 {isMobile ?
@@ -155,11 +147,10 @@ function Header(props) {
                   aria-label="mode"
                   onClick={() => setThemeMode(!themeMode)}
                 >
-                  <Icon fontSize="medium" />
+                  <Icon fontSize="small" />
                 </IconButton>
               </Typography>
             </Grid>
-            {/* </Toolbar> */}
           </Grid>
         </AppBar>
       </Slide>

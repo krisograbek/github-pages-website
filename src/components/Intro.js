@@ -10,11 +10,6 @@ const useStyles = makeStyles(({
   paragraph: {
     paddingTop: 24,
   },
-  photo: {
-    maxWidth: 320,
-    maxHeight: 320,
-    backgroundColor: "blue",
-  }
 }))
 
 function Intro() {
@@ -25,7 +20,6 @@ function Intro() {
       id="home"
       direction="column"
       className={classes.container}
-    // spacing={2}
     >
       <Grid item
         className={classes.paragraph}
@@ -38,14 +32,16 @@ function Intro() {
         className={classes.paragraph}
       >
         <Typography variant="h3Big">
-          I Create Machine Learning Content
+          Machine Learning Content Creator
         </Typography>
       </Grid>
       <Grid item
         className={classes.paragraph}
-        xs={4}
       >
-        <Typography variant="subtitle1">
+        <Typography
+          variant="subtitle1"
+          sx={{ width: 3 / 4 }}
+        >
           I give life to Machine Learning models by taking them outside of Notebooks.
           I build Full Stack Web Applications. I'm adding value by allowing interactions with the model's inputs.
         </Typography>

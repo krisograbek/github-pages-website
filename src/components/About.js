@@ -10,16 +10,15 @@ const useStyles = makeStyles((theme) => ({
     // paddingTop: 160,
   },
   item: {
-    padding: '32px 0',
+    paddingTop: 32,
   },
   paragraph: {
-    padding: '32px 0 0',
-    [theme.breakpoints.up('md')]: {
-      padding: '0 0 32px'
-    },
-    // paddingBottom: 24,
     width: '90%',
-    // textAlign: 'center'
+    padding: '0 0 32px',
+    [theme.breakpoints.down('md')]: {
+      textAlign: "center",
+      padding: '32px 0 0',
+    },
   },
   photo: {
     width: 256,

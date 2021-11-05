@@ -8,7 +8,7 @@ const useStyles = makeStyles(({
     width: '100%',
   },
   item: {
-    paddingTop: 64,
+    // paddingTop: 64,
   }
 }));
 
