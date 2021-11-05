@@ -62,8 +62,6 @@ const darkTheme = createTheme({
 const useStyles = makeStyles({
   root: {
     minHeight: '100vh',
-
-    // padding: 20
   }
 });
 
@@ -84,10 +82,7 @@ function App() {
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
           <Grid container
-            sx={{
-              maxWidth: '1200px',
-              margin: 'auto'
-            }}
+
           // justifyContent="space-between"
           >
             <Grid item xs={1}>

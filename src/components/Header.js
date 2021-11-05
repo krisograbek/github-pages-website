@@ -15,11 +15,17 @@ import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   container: {
     padding: '8px 0'
   },
-});
+  menuLink: {
+    fontSize: '16px',
+    "&:hover": {
+      color: theme.palette.primary.light
+    }
+  },
+}));
 
 const menuItems = [
   { link: "#about", name: "about" },
@@ -29,6 +35,7 @@ const menuItems = [
 ]
 
 function MobileNavbar() {
+  const classes = useStyles();
   const [anchor, setAnchor] = useState(null);
   const open = Boolean(anchor)
 
@@ -62,7 +69,8 @@ function MobileNavbar() {
           return (
             <Link
               key={name}
-              color="primary"
+              underline="hover"
+              className={classes.menuLink}
               href={link}
               onClick={() => setAnchor(null)}
             >
@@ -79,6 +87,7 @@ function MobileNavbar() {
 }
 
 function DesktopNavbar() {
+  const classes = useStyles();
   return (
     <Grid
       container
@@ -86,8 +95,10 @@ function DesktopNavbar() {
     >
       {menuItems.map(({ link, name }) => {
         return (
-          <Grid item style={{ paddingLeft: 12 }}>
-            <Link href={link}>
+          <Grid item style={{ paddingLeft: 16 }}>
+            <Link href={link}
+              underline="hover"
+              className={classes.menuLink}>
               {name}
             </Link>
           </Grid>

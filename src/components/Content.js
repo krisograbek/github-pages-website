@@ -27,11 +27,6 @@ const useStyles = makeStyles(({
   },
   paragraph: {
     paddingTop: 24,
-  },
-  photo: {
-    maxWidth: 320,
-    maxHeight: 320,
-    backgroundColor: "blue",
   }
 }))
 
