@@ -35,13 +35,26 @@ function About() {
       <Grid item
         className={classes.item}
       >
-        <Grid container>
-          {/* empty grid to push About above description */}
-          {/* <Grid item xs={6} /> */}
-          <Grid item xs={12}>
+        <Grid container
+          justifyContent="space-between"
+        >
+          <Grid
+            item xs={3}
+            alignSelf="center"
+            textAlign="right"
+          >
+            <hr />
+          </Grid>
+          <Grid item xs={6}>
             <Typography variant="h4" component="h2" textAlign="center">
               About
             </Typography>
+          </Grid>
+          <Grid
+            item xs={3}
+            alignSelf="center"
+          >
+            <hr />
           </Grid>
         </Grid>
       </Grid>
@@ -62,10 +75,8 @@ function About() {
               sx={{
                 width: '90%',
                 aspectRatio: 'auto'
-                // maxHeight: { xs: 256, sm: 320, lg: 400 },
-                // maxWidth: { xs: 256, sm: 320, lg: 400 },
               }}
-              alt="The house from the offer."
+              alt="My image"
               src="images/meGray.JPG"
             />
           </Grid>

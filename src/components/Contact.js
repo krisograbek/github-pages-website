@@ -4,6 +4,9 @@ import React from 'react'
 import makeStyles from '@mui/styles/makeStyles'
 
 const useStyles = makeStyles(({
+  container: {
+    width: '100%',
+  },
   item: {
     paddingTop: 64,
   }
@@ -17,10 +20,30 @@ function Contact() {
     >
       <Grid item
         className={item}
+        xs={12}
       >
-        <Typography variant="h4" component="h2">
-          Contact
-        </Typography>
+        <Grid container
+          justifyContent="space-between"
+        >
+          {/* <Grid
+            item xs={3}
+            alignSelf="center"
+            textAlign="right"
+          >
+            <hr />
+          </Grid> */}
+          <Grid item xs={6}>
+            <Typography variant="h4" component="h2" textAlign="center">
+              Contact
+            </Typography>
+          </Grid>
+          {/* <Grid
+            item xs={3}
+            alignSelf="center"
+          >
+            <hr />
+          </Grid> */}
+        </Grid>
       </Grid>
       <Grid item>
         <Typography>

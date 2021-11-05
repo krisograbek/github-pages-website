@@ -40,7 +40,7 @@ function Content() {
 
   return (
     <Grid item className={classes.content}>
-      <Grid container >
+      <Grid container alignContent="stretch">
         {sections.map((section) => {
           return (
             <Grid item className={classes.contentSection}>
