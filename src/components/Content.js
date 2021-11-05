@@ -20,10 +20,10 @@ const sections = [
 
 const useStyles = makeStyles(({
   content: {
-    // paddingLeft: 16
+    paddingLeft: 16
   },
   contentSection: {
-    paddingTop: 160,
+    paddingTop: 120,
   },
   paragraph: {
     paddingTop: 24,

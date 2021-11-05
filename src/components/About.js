@@ -5,15 +5,19 @@ import React from 'react'
 import makeStyles from '@mui/styles/makeStyles'
 
 
-const useStyles = makeStyles(({
+const useStyles = makeStyles((theme) => ({
   container: {
     // paddingTop: 160,
   },
   item: {
-    paddingBottom: 32,
+    padding: '32px 0',
   },
   paragraph: {
-    paddingBottom: 24,
+    padding: '32px 0 0',
+    [theme.breakpoints.up('md')]: {
+      padding: '0 0 32px'
+    },
+    // paddingBottom: 24,
     width: '90%',
     // textAlign: 'center'
   },
@@ -33,7 +37,7 @@ function About() {
       id="about"
     >
       <Grid item
-        className={classes.item}
+      // className={classes.item}
       >
         <Grid container
           justifyContent="space-between"
@@ -53,6 +57,7 @@ function About() {
           <Grid
             item xs={3}
             alignSelf="center"
+          // textAlign="right"
           >
             <hr />
           </Grid>
@@ -69,12 +74,15 @@ function About() {
             item
             xs={12} md={6}
             textAlign="center"
+            sx={{
+              // paddingBottom: 32
+            }}
           >
             <Box
               component="img"
               sx={{
                 width: '90%',
-                aspectRatio: 'auto'
+                aspectRatio: 'auto',
               }}
               alt="My image"
               src="images/meGray.JPG"

@@ -7,7 +7,7 @@ import ProjectCard from './ProjectCard';
 
 const useStyles = makeStyles(({
   item: {
-    paddingTop: 64,
+    // paddingTop: 64,
     marginTop: 16,
   }
 }))
@@ -18,8 +18,8 @@ function Projects() {
   return (
     <Grid id="projects" container>
       <Grid item
-        xs={12}
         className={item}
+        xs={12}
       >
         <Grid container
           justifyContent="space-between"
