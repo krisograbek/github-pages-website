@@ -66,7 +66,7 @@ function ProjectStack({ list }) {
         <Grid item key={id} xs={6} >
           <Box> &#9702;
             <Typography
-              variant="spanWhiteBold"
+              variant="spanBold"
               style={{ paddingLeft: 20 }}
             >
               {/* remove leading and trailing spaces */}

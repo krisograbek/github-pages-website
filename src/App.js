@@ -9,26 +9,13 @@ import Header from './components/Header';
 import Content from './components/Content';
 import SidebarLeft from './components/SidebarLeft';
 
-
-const lightTheme = createTheme({
-  palette: {
-    primary: {
-      light: '#00958b',
-      main: '#00796d',
-      dark: '#004d40',
-      // contrastText: '#000',
-    },
-    text: {
-      primary: grey[700],
-      secondary: '#000'
-    }
-  },
+const applyCommonTheme = theme => createTheme(theme, {
   typography: {
     h4: {
-      color: '#000'
+      color: theme.palette.text.secondary
     },
     h2Big: {
-      color: '#000',
+      color: theme.palette.text.secondary,
       fontSize: 'clamp(2rem, 8vw, 3rem)',
       fontWeight: 900,
     },
@@ -36,11 +23,25 @@ const lightTheme = createTheme({
       fontSize: 'clamp(2rem, 8vw, 3rem)',
       fontWeight: 700,
     },
-    spanWhiteBold: {
-      color: '#000',
+    spanBold: {
+      color: theme.palette.text.secondary,
       fontWeight: 600
     },
   }
+});
+
+const lightTheme = createTheme({
+  palette: {
+    primary: {
+      light: '#00958b',
+      main: '#00796d',
+      dark: '#004d40',
+    },
+    text: {
+      primary: grey[700],
+      secondary: '#000'
+    }
+  },
 });
 
 const darkTheme = createTheme({
@@ -50,31 +51,12 @@ const darkTheme = createTheme({
       light: '#a9dfdd',
       main: '#6ccbc7',
       dark: '#00a69e',
-      // contrastText: '#fff',
     },
     text: {
       primary: grey[400],
       secondary: '#fff'
     }
   },
-  typography: {
-    h4: {
-      color: '#fff'
-    },
-    h2Big: {
-      color: '#fff',
-      fontWeight: 900,
-      fontSize: 'clamp(2rem, 8vw, 3rem)',
-    },
-    h3Big: {
-      fontSize: 'clamp(2rem, 8vw, 3rem)',
-      fontWeight: 700,
-    },
-    spanWhiteBold: {
-      color: '#fff',
-      fontWeight: 600
-    },
-  }
 });
 
 const useStyles = makeStyles({
@@ -88,6 +70,7 @@ function App() {
   const classes = useStyles();
   const [themeMode, setThemeMode] = useState(true);
   let theme = themeMode ? darkTheme : lightTheme;
+  theme = applyCommonTheme(theme);
   theme = responsiveFontSizes(theme);
 
 
