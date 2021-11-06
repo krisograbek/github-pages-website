@@ -31,7 +31,7 @@ const menuItems = [
   { link: "#about", name: "about" },
   { link: "#projects", name: "projects" },
   { link: "#blog", name: "blog" },
-  { link: "#contact", name: "contact" }
+  { link: "#others", name: "others" }
 ]
 
 function MobileNavbar() {

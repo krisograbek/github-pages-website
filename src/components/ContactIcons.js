@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => {
     icon: {
       marginTop: '16px',
       fontSize: '24px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '20px',
+        textAlign: 'left'
+      },
     },
     link: {
       position: 'relative',
@@ -32,7 +36,11 @@ const useStyles = makeStyles((theme) => {
     box: {
       marginBottom: '32px',
       width: '100%',
-      textAlign: 'center'
+      textAlign: 'center',
+      [theme.breakpoints.down('sm')]: {
+        textAlign: 'left',
+        paddingLeft: 12,
+      }
     }
   })
 });
@@ -43,8 +51,8 @@ const links = [
   { "link": "https://medium.com/@kris-ograbek-nlp", "icon": FaMedium },
   { "link": "https://stackoverflow.com/users/15191870/krisograbek", "icon": FaStackOverflow },
   { "link": "https://www.hackerrank.com/krzysztof_ograb1", "icon": FaHackerrank },
-  { "link": "https://www.kaggle.com/ograbekk", "icon": FaKaggle },
-  { "link": "https://www.reddit.com/user/krispudzian", "icon": FaReddit },
+  // { "link": "https://www.kaggle.com/ograbekk", "icon": FaKaggle },
+  // { "link": "https://www.reddit.com/user/krispudzian", "icon": FaReddit },
 ]
 
 function ContactIcons() {
@@ -58,7 +66,6 @@ function ContactIcons() {
             key={id}
             item
           >
-            {/* <Typography variant="body1" > */}
             <Link
               href={item.link}
               className={classes.link}
@@ -67,7 +74,6 @@ function ContactIcons() {
             >
               <Icon className={classes.icon} />
             </Link>
-            {/* </Typography> */}
           </Grid>
         )
       })}

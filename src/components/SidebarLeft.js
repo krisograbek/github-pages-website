@@ -8,7 +8,6 @@ import ContactIcons from './ContactIcons';
 const useStyles = makeStyles((theme) => ({
   container: {
     position: "fixed",
-    // width: '50px',
     bottom: '0px',
     right: 'auto',
     zIndex: 2,
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   vline: {
     position: 'relative',
-    height: '96px',
+    height: '16px',
     // paddingTop: '24px',
     // borderLeft: 'solid 1px',
     left: '24px'

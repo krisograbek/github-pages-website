@@ -12,10 +12,10 @@ const useStyles = makeStyles(({
   }
 }));
 
-function Contact() {
+function Others() {
   const { item } = useStyles();
   return (
-    <Grid id="contact" container
+    <Grid id="others" container
       direction="column"
     >
       <Grid item
@@ -34,7 +34,7 @@ function Contact() {
           </Grid> */}
           <Grid item xs={6}>
             <Typography variant="h4" component="h2" textAlign="center">
-              Contact
+              Others
             </Typography>
           </Grid>
           {/* <Grid
@@ -47,11 +47,11 @@ function Contact() {
       </Grid>
       <Grid item>
         <Typography>
-          You can find me here
+          Yet to come ....
         </Typography>
       </Grid>
     </Grid>
   )
 }
 
-export default Contact
+export default Others;

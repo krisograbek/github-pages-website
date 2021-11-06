@@ -82,13 +82,12 @@ function App() {
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
           <Grid container
-
-          // justifyContent="space-between"
+          // justifyContent="space-around"
           >
             <Grid item xs={1}>
               <SidebarLeft />
             </Grid>
-            <Grid item xs={10}>
+            <Grid item xs={11}>
               <Content />
             </Grid>
           </Grid>
