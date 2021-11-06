@@ -5,7 +5,7 @@ import makeStyles from '@mui/styles/makeStyles'
 import React from 'react'
 import About from './About'
 import Blog from './Blog'
-import Contact from './Contact'
+import Others from './Others'
 import Intro from './Intro'
 import Projects from './Projects'
 import ScrollTop from './ScrollTop'
@@ -15,12 +15,14 @@ const sections = [
   <About />,
   <Projects />,
   <Blog />,
-  <Contact />
+  <Others />
 ]
 
 const useStyles = makeStyles(({
   content: {
-    paddingLeft: 16
+    paddingLeft: 16,
+    paddingRight: '8%',
+    paddingBottom: 100
   },
   contentSection: {
     paddingTop: 120,
@@ -35,7 +37,9 @@ function Content() {
 
   return (
     <Grid item className={classes.content}>
-      <Grid container alignContent="stretch">
+      <Grid container
+        direction="column"
+        alignContent="stretch">
         {sections.map((section) => {
           return (
             <Grid item className={classes.contentSection}>
