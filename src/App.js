@@ -8,6 +8,7 @@ import './App.css';
 import Header from './components/Header';
 import Content from './components/Content';
 import SidebarLeft from './components/SidebarLeft';
+import Footer from './components/Footer';
 
 const applyCommonTheme = theme => createTheme(theme, {
   typography: {
@@ -72,23 +73,31 @@ function App() {
   theme = applyCommonTheme(theme);
   theme = responsiveFontSizes(theme);
 
-
   return (
     <ThemeProvider theme={theme}>
       <Paper className={classes.root} elevation={0} square={true}>
-        <Grid
-          container
-          direction="column"
+        <Grid container direction="column"
+          alignItems="flex-end"
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
-          <Grid container
-          // justifyContent="space-around"
-          >
+          <Grid container>
             <Grid item xs={1}>
               <SidebarLeft />
             </Grid>
             <Grid item xs={11}>
               <Content />
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs={1}>
+              <div />
+            </Grid>
+            <Grid item xs={11}
+              sx={{ bgcolor: 'secondary.dark' }}
+            // alignSelf="flex-end"
+            // justifySelf="stretch"
+            >
+              <Footer />
             </Grid>
           </Grid>
         </Grid>
