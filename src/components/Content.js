@@ -21,7 +21,8 @@ const sections = [
 const useStyles = makeStyles(({
   content: {
     paddingLeft: 16,
-    paddingRight: '8%'
+    paddingRight: '8%',
+    paddingBottom: 100
   },
   contentSection: {
     paddingTop: 120,
@@ -36,7 +37,9 @@ function Content() {
 
   return (
     <Grid item className={classes.content}>
-      <Grid container alignContent="stretch">
+      <Grid container
+        direction="column"
+        alignContent="stretch">
         {sections.map((section) => {
           return (
             <Grid item className={classes.contentSection}>

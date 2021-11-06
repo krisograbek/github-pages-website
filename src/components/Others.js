@@ -25,24 +25,24 @@ function Others() {
         <Grid container
           justifyContent="space-between"
         >
-          {/* <Grid
+          <Grid
             item xs={3}
             alignSelf="center"
             textAlign="right"
           >
             <hr />
-          </Grid> */}
+          </Grid>
           <Grid item xs={6}>
             <Typography variant="h4" component="h2" textAlign="center">
               Others
             </Typography>
           </Grid>
-          {/* <Grid
+          <Grid
             item xs={3}
             alignSelf="center"
           >
             <hr />
-          </Grid> */}
+          </Grid>
         </Grid>
       </Grid>
       <Grid item>
