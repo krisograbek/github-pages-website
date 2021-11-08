@@ -1,14 +1,14 @@
 import grey from '@mui/material/colors/grey';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
-import Header from './components/Header';
 import Content from './components/Content';
-import SidebarLeft from './components/SidebarLeft';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import SidebarLeft from './components/SidebarLeft';
 
 const applyCommonTheme = theme => createTheme(theme, {
   typography: {
@@ -110,7 +110,6 @@ function App() {
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
           <Grid container>
             <Grid item xs={1}>
-              {/* {showSidebar && */}
               {showSidebar &&
                 <SidebarLeft />
               }
@@ -120,11 +119,7 @@ function App() {
             </Grid>
           </Grid>
           <Grid id="footer" container>
-            <Grid item xs={12}
-              sx={{ bgcolor: 'secondary.dark' }}
-            >
-              <Footer />
-            </Grid>
+            <Footer />
           </Grid>
         </Grid>
       </Paper>

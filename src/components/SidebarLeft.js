@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Grid';
 import makeStyles from '@mui/styles/makeStyles';
-import { borderLeft } from '@mui/system';
 import React from 'react';
 import ContactIcons from './ContactIcons';
 
