@@ -3,7 +3,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Content from './components/Content';
@@ -69,33 +69,59 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   const [themeMode, setThemeMode] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(true);
   let theme = themeMode ? darkTheme : lightTheme;
   theme = applyCommonTheme(theme);
   theme = responsiveFontSizes(theme);
 
+  const visabilityThreshold = 100;
+
+  const getOffset = (element) => {
+    const rect = element && element.getBoundingClientRect();
+    return rect.top;
+  };
+
+  const listenToScroll = () => {
+    const footerTopOffset =
+      getOffset(document.querySelector("#footer"));
+
+    if (footerTopOffset < (window.innerHeight + visabilityThreshold)) {
+      showSidebar &&      // to limit setting state only the first time
+        setShowSidebar(false);
+    } else {
+      setShowSidebar(true);
+    }
+  };
+
+  useEffect(() => {
+    console.log("Rerender")
+    window.addEventListener("scroll", listenToScroll);
+    return () =>
+      window.removeEventListener("scroll", listenToScroll);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
-      <Paper className={classes.root} elevation={0} square={true}>
+      <Paper className={classes.root} elevation={0} square={true}
+      >
         <Grid container direction="column"
           alignItems="flex-end"
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
           <Grid container>
             <Grid item xs={1}>
-              <SidebarLeft />
+              {/* {showSidebar && */}
+              {showSidebar &&
+                <SidebarLeft />
+              }
             </Grid>
             <Grid item xs={11}>
               <Content />
             </Grid>
           </Grid>
-          <Grid container>
-            <Grid item xs={1}>
-              <div />
-            </Grid>
-            <Grid item xs={11}
+          <Grid id="footer" container>
+            <Grid item xs={12}
               sx={{ bgcolor: 'secondary.dark' }}
-            // alignSelf="flex-end"
-            // justifySelf="stretch"
             >
               <Footer />
             </Grid>
