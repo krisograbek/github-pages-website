@@ -31,9 +31,9 @@ const menuItems = [
   { link: "#about", name: "about" },
   { link: "#projects", name: "projects" },
   { link: "#blog", name: "blog" },
-  { link: "#others", name: "others" },
+  // { link: "#others", name: "others" },
   // delete after testing
-  { link: "#footer", name: "footer" }
+  // { link: "#footer", name: "footer" }
 ]
 
 function MobileNavbar() {

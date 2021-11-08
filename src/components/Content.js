@@ -15,7 +15,7 @@ const sections = [
   <About />,
   <Projects />,
   <Blog />,
-  <Others />
+  // <Others />
 ]
 
 const useStyles = makeStyles(({
