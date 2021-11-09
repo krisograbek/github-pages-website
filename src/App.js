@@ -9,6 +9,7 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import SidebarLeft from './components/SidebarLeft';
+import SidebarRight from './components/SidebarRight';
 
 const applyCommonTheme = theme => createTheme(theme, {
   typography: {
@@ -114,8 +115,13 @@ function App() {
                 <SidebarLeft />
               }
             </Grid>
-            <Grid item xs={11}>
+            <Grid item xs={10}>
               <Content />
+            </Grid>
+            <Grid item xs={1}>
+              {showSidebar &&
+                <SidebarRight />
+              }
             </Grid>
           </Grid>
           <Grid id="footer" container>

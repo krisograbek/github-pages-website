@@ -20,9 +20,10 @@ const sections = [
 
 const useStyles = makeStyles(({
   content: {
-    paddingLeft: 16,
-    paddingRight: '8%',
-    paddingBottom: 100
+    padding: '0 12px 100px 12px',
+    // paddingLeft: 16,
+    // paddingBottom: 100
+    // paddingRight: '8%',
   },
   contentSection: {
     paddingTop: 120,
