@@ -3,6 +3,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import WbSunny from '@mui/icons-material/WbSunny';
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import SvgIcon from '@mui/material/SvgIcon';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
@@ -14,6 +16,8 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
+// import { ReactComponent as Logo } from './logo/logo_dark.svg'
+import { ReactComponent as Logo } from './logo/logo.svg'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -25,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.light
     }
   },
+  logo: {
+    fillColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.main,
+  }
 }));
 
 const menuItems = [
@@ -131,11 +139,15 @@ function Header(props) {
             <Grid item xs={1}
               textAlign="center"
             >
-              <Link variant="h6"
-                color="primary"
+              <Link
+                color="secondary"
                 href="#"
               >
-                KO
+                <Logo
+                  height={48} width={48}
+                  fill={theme.palette.primary.main}
+                  stroke={theme.palette.primary.main}
+                />
               </Link>
             </Grid>
             <Grid item xs={10}>
