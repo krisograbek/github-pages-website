@@ -1,21 +1,20 @@
-import React from 'react'
-import Grid from '@mui/material/Grid'
-import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
-import makeStyles from '@mui/styles/makeStyles';
-import grey from '@mui/material/colors/grey';
-import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
 import FaGithub from '@meronex/icons/fa/FaGithub';
 import FaHackerrank from '@meronex/icons/fa/FaHackerrank';
 import FaKaggle from '@meronex/icons/fa/FaKaggle';
+import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
 import FaMedium from '@meronex/icons/fa/FaMedium';
 import FaStackOverflow from '@meronex/icons/fa/FaStackOverflow';
-import FaReddit from '@meronex/icons/fa/FaReddit';
 import GoMail from '@meronex/icons/go/GoMail';
-import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
-
-
+import Box from '@mui/material/Box';
+import grey from '@mui/material/colors/grey';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import useTheme from '@mui/styles/useTheme';
+import makeStyles from '@mui/styles/makeStyles';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => {
   const greyLight = grey[200];
@@ -32,13 +31,8 @@ const useStyles = makeStyles((theme) => {
       position: 'relative',
       // I need this to keep icon and link text at the same level
       top: 3,
-      [theme.breakpoints.down('sm')]: {
-        // fontSize: '20px',
-        // textAlign: 'left'
-      },
     },
     link: {
-      // paddingTop: 16,
       fontSize: 14,
       "&:hover": {
         color: theme.palette.primary.main,
@@ -48,6 +42,7 @@ const useStyles = makeStyles((theme) => {
 });
 
 const links = [
+  { "link": "mailto:krzysztof.ograbek@gmail.com", "icon": GoMail, name: "Email" },
   { "link": "https://www.linkedin.com/in/kris-ograbek-nlp/", "icon": FaLinkedin, name: "LinkedIn" },
   { "link": "https://github.com/krisograbek", "icon": FaGithub, name: "GitHub" },
   { "link": "https://medium.com/@kris-ograbek-nlp", "icon": FaMedium, name: "Medium" },
@@ -71,15 +66,134 @@ const othersItems = [
   // { link: "#quotes", name: "quotes" },
 ]
 
-
-function Footer() {
+function FooterNavigateItem({ link, name, isOther }) {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // console.log(isMobile)
+  return (
+    <Grid item
+      sx={{
+        mb: 1,
+        pl: isMobile ? 0 : 1,
+        pr: isMobile ? 1 : 0
+      }}
+    >
+      <Link href={link}
+        underline="hover"
+        color="inherit"
+        className={classes.link}>
+        {isMobile ?
+          <Typography variant="spanBold" color="inherit">
+            {name}
+            {isOther && <Typography variant="span"> &#9702; </Typography>}
+          </Typography>
+          :
+          <Typography variant="spanBold" color="inherit">
+            {isOther && <Typography variant="span"> &#9702; </Typography>}
+            {name}
+          </Typography>
+        }
+      </Link>
+    </Grid>
+  )
+}
 
+
+function FooterNavigate(props) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <Grid item
+      xs={12} sm={6}
+      pb={1}
+      pr={{ xs: 1, md: 2 }}
+      textAlign={`${isMobile ? "right" : "left"}`}
+    >
+      <Box
+        sx={{
+          borderBottom: 1,
+          mb: 1,
+          pl: isMobile ? 0 : 1,
+          pr: isMobile ? 1 : 0
+        }}
+      >
+        Navigate
+      </Box>
+      {menuItems.map((item) => (
+        <FooterNavigateItem {...item} {...props} />
+      ))}
+      {othersItems && othersItems.map((item) => (
+        <FooterNavigateItem {...item} isOther={true} />
+      ))}
+    </Grid>
+  )
+}
+
+function FooterContacts(props) {
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
+    <Grid item
+      xs={12} sm={6}
+      pb={1}
+      pr={{ xs: 1, md: 2 }}
+      textAlign={`${isMobile ? "right" : "left"}`}
+    >
+      <Box
+        sx={{
+          borderBottom: 1,
+          mb: 1,
+          pl: isMobile ? 0 : 1,
+          pr: isMobile ? 1 : 0
+        }}
+      >
+        Contacts & Profiles
+      </Box>
+      <Grid container direction="column" >
+        {links.map((link) => {
+          const Icon = link.icon;
+          return (
+            <Grid item
+              key={link.link}
+              sx={{
+                pl: isMobile ? 0 : 1,
+                pr: isMobile ? 1 : 0
+              }}
+            >
+              <Box pb={1} pl={1}>
+                <Typography variant="span">
+                  <Link
+                    href={link.link}
+                    className={classes.link}
+                    color="inherit"
+                    underline="hover"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {!isMobile && <Icon className={classes.icon} />}
+                    <Typography variant="span" px={1}>
+                      {link.name}
+                    </Typography>
+                    {isMobile && <Icon className={classes.icon} />}
+                  </Link>
+                </Typography>
+              </Box>
+            </Grid>
+          )
+        })}
+      </Grid>
+    </Grid>
+  )
+}
 
+function Footer(props) {
+  const classes = useStyles();
+
+  return (
     <Grid item xs={12}
-      // className={classes.root}
       sx={{
         bgcolor: 'text.secondary',
         color: 'background.default'
@@ -90,91 +204,13 @@ function Footer() {
           px={{ xs: 3, md: 5 }}
           py={{ xs: 3, md: 5 }}
         >
-          {/* <Box textAlign="center"> */}
           <Grid container
-            // alignContent="center"
             justifyContent="center"
             alignContent="center"
-            // justifyContent="space-around"
             spacing={{ sm: 1, md: 2 }}
           >
-            <Grid item xs={12} sm={6} pb={1} pr={{ xs: 1, md: 2 }}>
-              <Box borderBottom={1} mb={1} pl={1}>Navigate</Box>
-              {menuItems.map(({ link, name }) => {
-                return (
-                  <Grid item mb={1} pl={1}>
-                    <Link href={link}
-                      underline="hover"
-                      color="inherit"
-                      className={classes.link}>
-                      <Typography variant="spanBold" color="inherit">
-                        {name}
-                      </Typography>
-                    </Link>
-                  </Grid>
-                )
-              })}
-
-              {othersItems && othersItems.map(({ link, name }) => {
-                return (
-                  <Grid item mb={1} pl={2}>
-                    <Link href={link}
-                      underline="hover"
-                      color="inherit"
-                      className={classes.link}>
-                      <Typography variant="spanBold" color="inherit">
-                        &#9702; {name}
-                      </Typography>
-                    </Link>
-                  </Grid>
-                )
-              })}
-            </Grid>
-            <Grid item xs={12} sm={6} pb={1} pr={{ xs: 1, md: 2 }}>
-              <Box borderBottom={1} mb={1} pl={1}>Contacts & Profiles</Box>
-              <Box pl={1}>
-                <Link
-                  href="mailto:krzysztof.ograbek@gmail.com"
-                  className={classes.link}
-                  color="inherit"
-                  underline="hover"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <GoMail className={classes.icon} />
-                  <Typography variant="span" px={1}>
-                    Email
-                  </Typography>
-                </Link>
-              </Box>
-              <Grid container direction="column" >
-                {links.map((link) => {
-                  const Icon = link.icon;
-                  return (
-                    <Grid item key={link.link}>
-                      <Box paddingTop={1} pl={1}>
-                        <Typography variant="span"
-                        >
-                          <Link
-                            href={link.link}
-                            className={classes.link}
-                            color="inherit"
-                            underline="hover"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Icon className={classes.icon} />
-                            <Typography variant="span" px={1}>
-                              {link.name}
-                            </Typography>
-                          </Link>
-                        </Typography>
-                      </Box>
-                    </Grid>
-                  )
-                })}
-              </Grid>
-            </Grid>
+            <FooterNavigate {...props} />
+            <FooterContacts {...props} />
             <Grid item xs={12}
               textAlign="center"
               pr={{ xs: 1, md: 2 }}
@@ -189,9 +225,7 @@ function Footer() {
             <Grid item xs={12}
               textAlign="center"
             >
-              <Box
-              // pt={{ xs: 2, sm: 3 }}
-              >
+              <Box>
                 <Link href="https://github.com/krisograbek/github-pages-website"
                   className={classes.link}
                   color="inherit"
@@ -204,7 +238,6 @@ function Footer() {
               </Box>
             </Grid>
           </Grid>
-          {/* </Box> */}
         </Box >
       </Container>
     </Grid >
