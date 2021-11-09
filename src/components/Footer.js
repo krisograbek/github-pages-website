@@ -13,6 +13,7 @@ import FaStackOverflow from '@meronex/icons/fa/FaStackOverflow';
 import FaReddit from '@meronex/icons/fa/FaReddit';
 import GoMail from '@meronex/icons/go/GoMail';
 import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
 
 
 
@@ -38,6 +39,7 @@ const useStyles = makeStyles((theme) => {
     },
     link: {
       // paddingTop: 16,
+      fontSize: 14,
       "&:hover": {
         color: theme.palette.primary.main,
       }
@@ -75,6 +77,7 @@ function Footer() {
 
 
   return (
+
     <Grid item xs={12}
       // className={classes.root}
       sx={{
@@ -82,124 +85,128 @@ function Footer() {
         color: 'background.default'
       }}
     >
-      <Box
-        px={{ xs: 3, sm: 5 }}
-        py={{ xs: 3, sm: 5 }}
-      >
-        {/* <Box textAlign="center"> */}
-        <Grid container
-          alignContent="center"
-          justifyContent="center"
-          spacing={3}
+      <Container maxWidth="lg">
+        <Box
+          px={{ xs: 3, md: 5 }}
+          py={{ xs: 3, md: 5 }}
         >
-
-          <Grid item xs={12} sm={6}>
-            <Box borderBottom={1} mb={1}>Navigate</Box>
-            {menuItems.map(({ link, name }) => {
-              return (
-                <Grid item mb={1}>
-                  <Link href={link}
-                    underline="hover"
-                    color="inherit"
-                    className={classes.link}>
-                    <Typography variant="spanBold" color="inherit">
-                      {name}
-                    </Typography>
-                  </Link>
-                </Grid>
-              )
-            })}
-
-            {othersItems && othersItems.map(({ link, name }) => {
-              return (
-                <Grid item mb={1} pl={1}>
-                  <Link href={link}
-                    underline="hover"
-                    color="inherit"
-                    className={classes.link}>
-                    <Typography variant="spanBold" color="inherit">
-                      &#9702; {name}
-                    </Typography>
-                  </Link>
-                </Grid>
-              )
-            })}
-
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box borderBottom={1} mb={1}>Contacts</Box>
-            <Box>
-              <Link
-                href="mailto:krzysztof.ograbek@gmail.com"
-                className={classes.link}
-                color="inherit"
-                underline="hover"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <GoMail className={classes.icon} />
-                <Typography variant="span" px={1}>
-                  krzysztof.ograbek@gmail.com
-                </Typography>
-              </Link>
-            </Box>
-            <Grid container direction="column" >
-              {links.map((link) => {
-                const Icon = link.icon;
+          {/* <Box textAlign="center"> */}
+          <Grid container
+            // alignContent="center"
+            justifyContent="center"
+            alignContent="center"
+            // justifyContent="space-around"
+            spacing={{ sm: 1, md: 2 }}
+          >
+            <Grid item xs={12} sm={6} pb={1} pr={{ xs: 1, md: 2 }}>
+              <Box borderBottom={1} mb={1} pl={1}>Navigate</Box>
+              {menuItems.map(({ link, name }) => {
                 return (
-                  <Grid item key={link.link}>
-                    <Box paddingTop={1}>
-                      <Typography variant="span"
-                      >
-                        <Link
-                          href={link.link}
-                          className={classes.link}
-                          color="inherit"
-                          underline="hover"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <Icon className={classes.icon} />
-                          <Typography variant="span" px={1}>
-                            {link.name}
-                          </Typography>
-                        </Link>
+                  <Grid item mb={1} pl={1}>
+                    <Link href={link}
+                      underline="hover"
+                      color="inherit"
+                      className={classes.link}>
+                      <Typography variant="spanBold" color="inherit">
+                        {name}
                       </Typography>
-                    </Box>
+                    </Link>
+                  </Grid>
+                )
+              })}
+
+              {othersItems && othersItems.map(({ link, name }) => {
+                return (
+                  <Grid item mb={1} pl={2}>
+                    <Link href={link}
+                      underline="hover"
+                      color="inherit"
+                      className={classes.link}>
+                      <Typography variant="spanBold" color="inherit">
+                        &#9702; {name}
+                      </Typography>
+                    </Link>
                   </Grid>
                 )
               })}
             </Grid>
-          </Grid>
-          <Grid item xs={12}
-            textAlign="center"
-          >
-            <Box
-              pt={{ xs: 3, sm: 5 }}
+            <Grid item xs={12} sm={6} pb={1} pr={{ xs: 1, md: 2 }}>
+              <Box borderBottom={1} mb={1} pl={1}>Contacts & Profiles</Box>
+              <Box pl={1}>
+                <Link
+                  href="mailto:krzysztof.ograbek@gmail.com"
+                  className={classes.link}
+                  color="inherit"
+                  underline="hover"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <GoMail className={classes.icon} />
+                  <Typography variant="span" px={1}>
+                    Email
+                  </Typography>
+                </Link>
+              </Box>
+              <Grid container direction="column" >
+                {links.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <Grid item key={link.link}>
+                      <Box paddingTop={1} pl={1}>
+                        <Typography variant="span"
+                        >
+                          <Link
+                            href={link.link}
+                            className={classes.link}
+                            color="inherit"
+                            underline="hover"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <Icon className={classes.icon} />
+                            <Typography variant="span" px={1}>
+                              {link.name}
+                            </Typography>
+                          </Link>
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  )
+                })}
+              </Grid>
+            </Grid>
+            <Grid item xs={12}
+              textAlign="center"
+              pr={{ xs: 1, md: 2 }}
             >
-              Designed and created by Krzysztof Ograbek &copy; {new Date().getFullYear()}
-            </Box>
-          </Grid>
-          <Grid item xs={12}
-            textAlign="center"
-          >
-            <Box
-            // pt={{ xs: 2, sm: 3 }}
-            >
-              <Link href="https://github.com/krisograbek/github-pages-website"
-                className={classes.link}
-                color="inherit"
-                underline="hover"
-                target="_blank"
-                rel="noreferrer"
+              <Box
+                pt={{ xs: 2, sm: 3 }}
+                borderTop={1}
               >
-                Source Code
-              </Link>
-            </Box>
+                Designed and created by Krzysztof Ograbek &copy; {new Date().getFullYear()}
+              </Box>
+            </Grid>
+            <Grid item xs={12}
+              textAlign="center"
+            >
+              <Box
+              // pt={{ xs: 2, sm: 3 }}
+              >
+                <Link href="https://github.com/krisograbek/github-pages-website"
+                  className={classes.link}
+                  color="inherit"
+                  underline="hover"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Source Code
+                </Link>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
-        {/* </Box> */}
-      </Box >
+          {/* </Box> */}
+        </Box >
+      </Container>
     </Grid >
   )
 }
