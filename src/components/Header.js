@@ -116,8 +116,8 @@ function Header(props) {
   const { themeMode, setThemeMode } = props;
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const trigger = useScrollTrigger();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const Icon = themeMode ? WbSunny : Brightness4;
 
