@@ -3,8 +3,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import WbSunny from '@mui/icons-material/WbSunny';
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import SvgIcon from '@mui/material/SvgIcon';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
@@ -16,8 +14,8 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
-// import { ReactComponent as Logo } from './logo/logo_dark.svg'
-import { ReactComponent as Logo } from './logo/logo.svg'
+import { ReactComponent as Logo } from './logo/logo.svg';
+import Container from '@mui/material/Container'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -29,10 +27,6 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.light
     }
   },
-  logo: {
-    fillColor: theme.palette.secondary.main,
-    color: theme.palette.secondary.main,
-  }
 }));
 
 const menuItems = [
@@ -131,52 +125,54 @@ function Header(props) {
     <Grid item>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar position="fixed" color="default">
-          <Grid container
-            className={classes.container}
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            <Grid item xs={1}
-              textAlign="center"
+          <Container maxWidth="xl">
+
+            <Grid container
+              className={classes.container}
+              justifyContent="space-between"
+              alignItems="center"
             >
-              <Link
-                color="secondary"
-                href="#"
-              >
-                <Logo
-                  height={48} width={48}
-                  fill={theme.palette.primary.main}
-                  stroke={theme.palette.primary.main}
-                />
-              </Link>
-            </Grid>
-            <Grid item xs={10}>
-              <Typography
-                variant="h6"
-              >
-                {isMobile ?
-                  <MobileNavbar />
-                  :
-                  <DesktopNavbar />
-                }
-              </Typography>
-            </Grid>
-            <Grid item xs={1}>
-              <Typography
+              <Grid item xs={1}
                 textAlign="center"
               >
-                <IconButton
-                  edge="end"
-                  color="primary"
-                  size="small"
-                  aria-label="mode"
-                  onClick={() => setThemeMode(!themeMode)}
+                <Link
+                  href="#"
                 >
-                  <Icon fontSize="small" />
-                </IconButton>
-              </Typography>
+                  <Logo
+                    height={48} width={48}
+                    fill={theme.palette.primary.main}
+                    stroke={theme.palette.primary.main}
+                  />
+                </Link>
+              </Grid>
+              <Grid item xs={10}>
+                <Typography
+                  variant="h6"
+                >
+                  {isMobile ?
+                    <MobileNavbar />
+                    :
+                    <DesktopNavbar />
+                  }
+                </Typography>
+              </Grid>
+              <Grid item xs={1}>
+                <Typography
+                  textAlign="center"
+                >
+                  <IconButton
+                    edge="end"
+                    color="primary"
+                    size="small"
+                    aria-label="mode"
+                    onClick={() => setThemeMode(!themeMode)}
+                  >
+                    <Icon fontSize="small" />
+                  </IconButton>
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
+          </Container>
         </AppBar>
       </Slide>
     </Grid >

@@ -9,6 +9,8 @@ import Content from './components/Content';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import SidebarLeft from './components/SidebarLeft';
+import SidebarRight from './components/SidebarRight';
+import Container from '@mui/material/Container'
 
 const applyCommonTheme = theme => createTheme(theme, {
   typography: {
@@ -108,16 +110,24 @@ function App() {
           alignItems="flex-end"
         >
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
-          <Grid container>
-            <Grid item xs={1}>
-              {showSidebar &&
-                <SidebarLeft />
-              }
+          <Container maxWidth="xl">
+
+            <Grid container>
+              <Grid item xs={1}>
+                {showSidebar &&
+                  <SidebarLeft />
+                }
+              </Grid>
+              <Grid item xs={10}>
+                <Content />
+              </Grid>
+              <Grid item xs={1}>
+                {showSidebar &&
+                  <SidebarRight />
+                }
+              </Grid>
             </Grid>
-            <Grid item xs={11}>
-              <Content />
-            </Grid>
-          </Grid>
+          </Container>
           <Grid id="footer" container>
             <Footer />
           </Grid>

@@ -30,10 +30,11 @@ function About() {
   const classes = useStyles();
   return (
     <Grid
-      container
-      className={classes.container}
-      direction="column"
       id="about"
+      container
+      direction="column"
+      pt={{ xs: 10, md: 15, lg: 20 }}
+    // className={classes.container}
     >
       <Grid item
       // className={classes.item}

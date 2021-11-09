@@ -19,7 +19,8 @@ function Intro() {
       container
       id="home"
       direction="column"
-      className={classes.container}
+      // className={classes.container}
+      pt={{ xs: 10, md: 15, lg: 20 }}
     >
       <Grid item
         className={classes.paragraph}
