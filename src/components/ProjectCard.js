@@ -67,7 +67,7 @@ function ProjectStack({ list }) {
           <Box> &#9702;
             <Typography
               variant="spanBold"
-              style={{ paddingLeft: 20 }}
+              pl={{ xs: 1, sm: 2 }}
             >
               {/* remove leading and trailing spaces */}
               {item.trim()}
