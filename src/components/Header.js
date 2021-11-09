@@ -15,6 +15,7 @@ import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
 import { ReactComponent as Logo } from './logo/logo.svg';
+import Container from '@mui/material/Container'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -124,51 +125,54 @@ function Header(props) {
     <Grid item>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar position="fixed" color="default">
-          <Grid container
-            className={classes.container}
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            <Grid item xs={1}
-              textAlign="center"
+          <Container maxWidth="xl">
+
+            <Grid container
+              className={classes.container}
+              justifyContent="space-between"
+              alignItems="center"
             >
-              <Link
-                href="#"
-              >
-                <Logo
-                  height={48} width={48}
-                  fill={theme.palette.primary.main}
-                  stroke={theme.palette.primary.main}
-                />
-              </Link>
-            </Grid>
-            <Grid item xs={10}>
-              <Typography
-                variant="h6"
-              >
-                {isMobile ?
-                  <MobileNavbar />
-                  :
-                  <DesktopNavbar />
-                }
-              </Typography>
-            </Grid>
-            <Grid item xs={1}>
-              <Typography
+              <Grid item xs={1}
                 textAlign="center"
               >
-                <IconButton
-                  edge="end"
-                  color="primary"
-                  size="small"
-                  aria-label="mode"
-                  onClick={() => setThemeMode(!themeMode)}
+                <Link
+                  href="#"
                 >
-                  <Icon fontSize="small" />
-                </IconButton>
-              </Typography>
+                  <Logo
+                    height={48} width={48}
+                    fill={theme.palette.primary.main}
+                    stroke={theme.palette.primary.main}
+                  />
+                </Link>
+              </Grid>
+              <Grid item xs={10}>
+                <Typography
+                  variant="h6"
+                >
+                  {isMobile ?
+                    <MobileNavbar />
+                    :
+                    <DesktopNavbar />
+                  }
+                </Typography>
+              </Grid>
+              <Grid item xs={1}>
+                <Typography
+                  textAlign="center"
+                >
+                  <IconButton
+                    edge="end"
+                    color="primary"
+                    size="small"
+                    aria-label="mode"
+                    onClick={() => setThemeMode(!themeMode)}
+                  >
+                    <Icon fontSize="small" />
+                  </IconButton>
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
+          </Container>
         </AppBar>
       </Slide>
     </Grid >

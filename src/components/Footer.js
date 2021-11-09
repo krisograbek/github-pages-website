@@ -85,7 +85,7 @@ function Footer() {
         color: 'background.default'
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Box
           px={{ xs: 3, md: 5 }}
           py={{ xs: 3, md: 5 }}
