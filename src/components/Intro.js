@@ -32,7 +32,7 @@ function Intro() {
       </Grid>
       <Grid item className={classes.paragraph}>
         <Typography variant="h4">
-          I believe in Implementation because projects help knowledge to stick.
+          I believe in Learning by Doing. Because projects help knowledge to stick.
         </Typography>
       </Grid>
       <Grid container borderLeft={4} mt={{ xs: 2, sm: 4, md: 8 }} py={1}>
