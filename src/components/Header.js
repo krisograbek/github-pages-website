@@ -13,7 +13,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
-import { ReactComponent as Logo } from './logo/logo.svg';
+import { ReactComponent as Logo } from './logo/logo2.svg';
 
 const useStyles = makeStyles((theme) => ({
   menuLink: {
