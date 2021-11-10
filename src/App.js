@@ -104,27 +104,19 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Paper className={classes.root} elevation={0} square={true}
-      >
-        <Grid container direction="column"
-          alignItems="flex-end"
-        >
+      <Paper className={classes.root} elevation={0} square={true}>
+        <Grid container direction="column" alignItems="flex-end">
           <Header setThemeMode={setThemeMode} themeMode={themeMode} />
           <Container maxWidth="xl">
-
             <Grid container>
               <Grid item xs={1}>
-                {showSidebar &&
-                  <SidebarLeft />
-                }
+                {showSidebar && <SidebarLeft />}
               </Grid>
               <Grid item xs={10}>
                 <Content />
               </Grid>
               <Grid item xs={1}>
-                {showSidebar &&
-                  <SidebarRight />
-                }
+                {showSidebar && <SidebarRight />}
               </Grid>
             </Grid>
           </Container>

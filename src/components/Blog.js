@@ -1,47 +1,13 @@
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import React from 'react'
-import articles from "./data/articles.json";
+import Grid from '@mui/material/Grid';
+import React from 'react';
 import ArticleCard from './ArticleCard';
-import makeStyles from '@mui/styles/makeStyles'
-
-const useStyles = makeStyles(({
-  item: {
-    // paddingTop: 64,
-  }
-}));
+import ContentSectionTitle from './ContentSectionTitle';
+import articles from "./data/articles.json";
 
 function Blog() {
-  const { item } = useStyles();
   return (
     <Grid id="blog" container direction="column">
-      <Grid item
-        className={item}
-        xs={12}
-      >
-        <Grid container
-          justifyContent="space-between"
-        >
-          <Grid
-            item xs={3}
-            alignSelf="center"
-            textAlign="right"
-          >
-            <hr />
-          </Grid>
-          <Grid item xs={6}>
-            <Typography variant="h4" component="h2" textAlign="center">
-              Articles
-            </Typography>
-          </Grid>
-          <Grid
-            item xs={3}
-            alignSelf="center"
-          >
-            <hr />
-          </Grid>
-        </Grid>
-      </Grid>
+      <ContentSectionTitle title={"Articles"} />
       <Grid item>
         <Grid container spacing={2}>
           {articles.map((article, id) => {

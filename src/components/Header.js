@@ -1,7 +1,6 @@
-import Brightness4 from '@mui/icons-material/Brightness4';
 import MenuIcon from '@mui/icons-material/Menu';
-import WbSunny from '@mui/icons-material/WbSunny';
 import AppBar from '@mui/material/AppBar';
+import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
@@ -15,14 +14,11 @@ import makeStyles from '@mui/styles/makeStyles';
 import useTheme from '@mui/styles/useTheme';
 import React, { useState } from 'react';
 import { ReactComponent as Logo } from './logo/logo.svg';
-import Container from '@mui/material/Container'
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: '8px 0'
-  },
   menuLink: {
-    fontSize: '16px',
+    fontSize: 16,
+    fontWeight: 600,
     "&:hover": {
       color: theme.palette.primary.light
     }
@@ -30,16 +26,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const menuItems = [
-  { link: "#about", name: "about" },
-  { link: "#projects", name: "projects" },
-  { link: "#blog", name: "blog" },
+  { link: "#home", name: "what I do" },
+  { link: "#about", name: "who I am" },
+  { link: "#projects", name: "what I built" },
+  { link: "#blog", name: "what I wrote" },
   // { link: "#others", name: "others" },
-  // delete after testing
-  // { link: "#footer", name: "footer" }
 ]
 
 function MobileNavbar() {
-  const classes = useStyles();
   const [anchor, setAnchor] = useState(null);
   const open = Boolean(anchor)
 
@@ -52,10 +46,7 @@ function MobileNavbar() {
   }
 
   return (
-    <Grid
-      container
-      justifyContent="flex-end"
-    >
+    <Grid container justifyContent="flex-end">
       <IconButton
         aria-label="menu"
         onClick={handleMenu}
@@ -69,22 +60,18 @@ function MobileNavbar() {
         open={open}
         onClose={handleMenuClose}
       >
-        {menuItems.map(({ link, name }) => {
-          return (
-            <Link
-              key={name}
-              underline="hover"
-              className={classes.menuLink}
-              href={link}
-              onClick={() => setAnchor(null)}
-            >
-              <MenuItem>
-                {name}
-              </MenuItem>
-            </Link>
-          )
-        })}
-
+        {menuItems.map(({ link, name }) => (
+          <Link
+            key={name}
+            underline="hover"
+            href={link}
+            onClick={() => setAnchor(null)}
+          >
+            <MenuItem sx={{ fontSize: 16, fontWeight: 600 }}>
+              {name}
+            </MenuItem>
+          </Link>
+        ))}
       </Menu>
     </Grid>
   )
@@ -93,51 +80,38 @@ function MobileNavbar() {
 function DesktopNavbar() {
   const classes = useStyles();
   return (
-    <Grid
-      container
-      justifyContent="flex-end"
-    >
-      {menuItems.map(({ link, name }) => {
-        return (
-          <Grid item style={{ paddingLeft: 16 }}>
-            <Link href={link}
-              underline="hover"
-              className={classes.menuLink}>
-              {name}
-            </Link>
-          </Grid>
-        )
-      })}
+    <Grid container justifyContent="flex-end">
+      {menuItems.map(({ link, name }) => (
+        <Grid item pl={2}>
+          <Link
+            href={link}
+            underline="hover"
+            className={classes.menuLink}>
+            {name}
+          </Link>
+        </Grid>
+      ))}
     </Grid>
   )
 }
 
-function Header(props) {
-  const { themeMode, setThemeMode } = props;
-  const classes = useStyles();
+function Header() {
   const theme = useTheme();
   const trigger = useScrollTrigger();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-  const Icon = themeMode ? WbSunny : Brightness4;
 
   return (
     <Grid item>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar position="fixed" color="default">
           <Container maxWidth="xl">
-
             <Grid container
-              className={classes.container}
               justifyContent="space-between"
               alignItems="center"
+              pt={1}
             >
-              <Grid item xs={1}
-                textAlign="center"
-              >
-                <Link
-                  href="#"
-                >
+              <Grid item xs={1} textAlign="center">
+                <Link href="#">
                   <Logo
                     height={48} width={48}
                     fill={theme.palette.primary.main}
@@ -146,9 +120,7 @@ function Header(props) {
                 </Link>
               </Grid>
               <Grid item xs={10}>
-                <Typography
-                  variant="h6"
-                >
+                <Typography variant="h6">
                   {isMobile ?
                     <MobileNavbar />
                     :
@@ -156,21 +128,7 @@ function Header(props) {
                   }
                 </Typography>
               </Grid>
-              <Grid item xs={1}>
-                <Typography
-                  textAlign="center"
-                >
-                  <IconButton
-                    edge="end"
-                    color="primary"
-                    size="small"
-                    aria-label="mode"
-                    onClick={() => setThemeMode(!themeMode)}
-                  >
-                    <Icon fontSize="small" />
-                  </IconButton>
-                </Typography>
-              </Grid>
+              <Grid item xs={1} />
             </Grid>
           </Container>
         </AppBar>

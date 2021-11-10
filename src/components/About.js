@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import React from 'react'
 import makeStyles from '@mui/styles/makeStyles'
+import ContentSectionTitle from './ContentSectionTitle'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,48 +37,10 @@ function About() {
       pt={{ xs: 10, md: 15, lg: 20 }}
     // className={classes.container}
     >
-      <Grid item
-      // className={classes.item}
-      >
-        <Grid container
-          justifyContent="space-between"
-        >
-          <Grid
-            item xs={3}
-            alignSelf="center"
-            textAlign="right"
-          >
-            <hr />
-          </Grid>
-          <Grid item xs={6}>
-            <Typography variant="h4" component="h2" textAlign="center">
-              About
-            </Typography>
-          </Grid>
-          <Grid
-            item xs={3}
-            alignSelf="center"
-          // textAlign="right"
-          >
-            <hr />
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item
-        className={classes.item}
-      >
-        <Grid
-          container
-          justifyContent="space-between"
-        >
-          <Grid
-            item
-            xs={12} md={6}
-            textAlign="center"
-            sx={{
-              // paddingBottom: 32
-            }}
-          >
+      <ContentSectionTitle title="About me" />
+      <Grid item className={classes.item}>
+        <Grid container justifyContent="space-between">
+          <Grid item xs={12} md={6} textAlign="center">
             <Box
               component="img"
               sx={{
@@ -89,22 +52,16 @@ function About() {
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            <Grid container
-              justifyContent="center"
-            >
-              <Grid item
-                className={classes.paragraph}
-              >
+            <Grid container justifyContent="center">
+              <Grid item className={classes.paragraph}>
                 <Typography>
-                  Welcome, my name is
+                  Welcome. My name is
                   <Typography variant="spanBold"> Kris Ograbek </Typography>.
                   OK, my real name is Krzysztof but people get very creative when it comes to misspelling it.
                   So, feel free to call me Kris.
                 </Typography>
               </Grid>
-              <Grid item
-                className={classes.paragraph}
-              >
+              <Grid item className={classes.paragraph}>
                 <Typography>
                   In May 2019, I started learning Data Science. To improve every day while having a full-time job, I decided to wake up at 5 am.
                   In the meanwhile, I became a father. What was my solution to keep learning? Waking up at 4 am. Yes, 4 am is when I start my days.
