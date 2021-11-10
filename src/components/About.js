@@ -56,7 +56,7 @@ function About() {
               <Grid item className={classes.paragraph}>
                 <Typography>
                   Welcome. My name is
-                  <Typography variant="spanBold"> Kris Ograbek </Typography>.
+                  <Typography variant="spanBold"> Kris Ograbek</Typography>.
                   OK, my real name is Krzysztof but people get very creative when it comes to misspelling it.
                   So, feel free to call me Kris.
                 </Typography>
