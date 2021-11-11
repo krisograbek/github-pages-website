@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import { useEffect, useState } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import './App.css';
 import Content from './components/Content';
 import Footer from './components/Footer';
@@ -75,6 +76,7 @@ function App() {
   let theme = themeMode ? darkTheme : lightTheme;
   theme = applyCommonTheme(theme);
   theme = responsiveFontSizes(theme);
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const visabilityThreshold = 100;
 
@@ -110,7 +112,7 @@ function App() {
           <Container maxWidth="xl">
             <Grid container>
               <Grid item xs={1}>
-                {showSidebar && <SidebarLeft />}
+                {showSidebar && !isMobile && < SidebarLeft />}
               </Grid>
               <Grid item xs={10}>
                 <Content />
