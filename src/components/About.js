@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 function AboutParagraph(props) {
   return (
-    <Grid item
+    <Grid item xs={8}
       pb={{ md: 0, lg: 2, xl: 3 }}
       pt={{ xs: 2, md: 3, lg: 0 }}
     >
@@ -64,7 +64,7 @@ function MyStory() {
           pl={{ md: 0, lg: 3 }}
         >
           <AboutParagraph>
-            <Typography>
+            <Typography maxWidth={{ sm: "100%", md: "80%", lg: "100%" }}>
               Welcome. My name is
               <Typography variant="spanBold"> Kris Ograbek</Typography>.
               OK, my real name is Krzysztof but people get very creative when it comes to misspelling it.
@@ -92,10 +92,8 @@ function MyStory() {
             </Typography>
           </AboutParagraph>
           <AboutParagraph>
-            <Typography>
+            <Typography maxWidth={{ sm: "100%", md: "80%", lg: "60%" }}>
               At the age of 32, I finally found my purpose. I want to learn and grow every day.
-            </Typography>
-            <Typography>
               I'm on the best journey of my life, the one that never ends.
               <Typography variant="span" color="text.secondary"> Lifelong Learning</Typography>.
               Join me!
@@ -161,8 +159,7 @@ function MyPromise() {
           </AboutContentList>
           <AboutContentList>
             - create Web Applications using
-            <Typography variant="span" color="text.secondary"> JavaScript and React </Typography>
-            for better interaction with models,
+            <Typography variant="span" color="text.secondary"> JavaScript and React</Typography>,
           </AboutContentList>
           <AboutContentList>
             - deploy models globally with
@@ -170,7 +167,7 @@ function MyPromise() {
           </AboutContentList>
         </AboutParagraph>
         <AboutParagraph>
-          <Typography>
+          <Typography maxWidth={{ sm: "100%", md: "80%", lg: "60%" }}>
             This website is the heart of my content creation.
             Every time I'll publish something new on
             <Link href="https://medium.com/@kris-ograbek-nlp"
