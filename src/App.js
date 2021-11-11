@@ -98,7 +98,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("Rerender")
     window.addEventListener("scroll", listenToScroll);
     return () =>
       window.removeEventListener("scroll", listenToScroll);
@@ -114,7 +113,7 @@ function App() {
               <Grid item xs={1}>
                 {showSidebar && !isMobile && < SidebarLeft />}
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={12} sm={10}>
                 <Content />
               </Grid>
               <Grid item xs={1}>

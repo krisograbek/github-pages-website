@@ -146,7 +146,7 @@ function MyPromise() {
             <Typography variant="span" color="text.secondary"> TensorFlow and Pytorch</Typography>,
           </AboutContentList>
           <AboutContentList>
-            - <Typography variant="spanBold"> NLP: </Typography>
+            - <Typography variant="spanBold"> NLP</Typography>:
             <Typography variant="span" color="text.secondary"> Huggingface, SpaCy, Gensim, and NLTK</Typography>.
           </AboutContentList>
         </AboutParagraph>
@@ -179,10 +179,7 @@ function MyPromise() {
               target="_blank"
               rel="noreferrer"
             > Medium
-            </Link> or YouTube, this site will update.
-            {/* </Typography>
-          <Typography> */}
-            Every time I'll finish a noteworthy project on
+            </Link> or YouTube, this site will update. Every time I'll finish a noteworthy project on
             <Link href="https://github.com/krisograbek"
               underline="hover"
               className={classes.link}
