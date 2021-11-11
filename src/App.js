@@ -12,6 +12,7 @@ import Header from './components/Header';
 import SidebarLeft from './components/SidebarLeft';
 import SidebarRight from './components/SidebarRight';
 import Container from '@mui/material/Container'
+import SwitchThemeMode from './components/SwitchThemeMode';
 
 const applyCommonTheme = theme => createTheme(theme, {
   typography: {
@@ -124,6 +125,7 @@ function App() {
           <Grid id="footer" container>
             <Footer />
           </Grid>
+          <SwitchThemeMode themeMode={themeMode} setThemeMode={setThemeMode} />
         </Grid>
       </Paper>
     </ThemeProvider >
