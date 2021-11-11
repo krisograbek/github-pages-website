@@ -88,11 +88,11 @@ function MyStory() {
               In my 20's, learning was my unpleasant duty.
             </Typography>
             <Typography>
-              In my 30's, I discovered my passion for learning.
+              In my 30's, learning is my passion.
             </Typography>
           </AboutParagraph>
           <AboutParagraph>
-            <Typography maxWidth={{ sm: "100%", md: "80%", lg: "60%" }}>
+            <Typography maxWidth={{ sm: "100%", md: "80%", lg: "100%" }}>
               At the age of 32, I finally found my purpose. I want to learn and grow every day.
               I'm on the best journey of my life, the one that never ends.
               <Typography variant="span" color="text.secondary"> Lifelong Learning</Typography>.
@@ -131,9 +131,9 @@ function MyPromise() {
         </AboutParagraph>
         <AboutParagraph>
           <Typography>
-            You will find Machine Learning Projects created using
+            You will find Machine Learning Projects created with
             <Typography variant="span" color="text.secondary"> Python </Typography>
-            libraries for:
+            including libraries for:
           </Typography>
           <AboutContentList>
             - traditional<Typography variant="spanBold"> Machine Learning</Typography>:
@@ -150,7 +150,7 @@ function MyPromise() {
         </AboutParagraph>
         <AboutParagraph>
           <Typography>
-            You'll learn how to:
+            You can learn how to:
           </Typography>
           <AboutContentList >
             - build
@@ -169,7 +169,7 @@ function MyPromise() {
         <AboutParagraph>
           <Typography maxWidth={{ sm: "100%", md: "80%", lg: "60%" }}>
             This website is the heart of my content creation.
-            Every time I'll publish something new on
+            Every time I'll publish something on
             <Link href="https://medium.com/@kris-ograbek-nlp"
               underline="hover"
               className={classes.link}
@@ -183,7 +183,7 @@ function MyPromise() {
               target="_blank"
               rel="noreferrer"
             > Github
-            </Link> or deploy a Machine Learning Project, you'll find it here.
+            </Link> you'll find it here.
           </Typography>
         </AboutParagraph>
       </Grid>
