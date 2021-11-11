@@ -6,7 +6,7 @@
         "description": [
             "Imbalanced data is a common yet challenging problem in Machine Learning. ",
             "Multi-class classification adds another level of complexity. ",
-            "I this article, I show a possible way of dealing with the problems - cost-sensitive learning. ",
+            "In this article, I show a possible way of dealing with the problems: cost-sensitive learning. ",
             "You can learn how to implement it using scikit-learn. "
         ],
         "imgSrc": "https://miro.medium.com/max/1110/1*EUAUZoHWRqVXzhlH8tspkA.png",
@@ -18,9 +18,9 @@
     {
         "link": "https://kris-ograbek-nlp.medium.com/pay-attention-to-your-neighbors-a-simple-approach-to-the-part-of-speech-tagging-f8aa4af0b313",
         "title": "Pay Attention to Your Neighbors. A Simple Approach to the Part Of Speech Tagging",
-        "subtitle": "Know the word by its company",
+        "subtitle": "Know the word by its neighbors",
         "description": [
-            "An article about human language. I wrote about challenges of understanding the human language. ",
+            "I wrote about challenges of understanding the human language. ",
             "To illustrate the problem, I gave several examples of homonyms. ",
             "I showed how one of my favorite NLP Libraries - spaCy - recognizes the correct Part of Speech. ",
             "There are multiple rules about words' neighborhood that are helpful to accomplish the task. "
@@ -36,10 +36,9 @@
         "subtitle": "Take advantage of Named Entities with SpaCy",
         "description": [
             "Named Entities are real-world objects, that have a unique representation. ",
-            "In text, they're capitalized. This makes them easy to detect. ",
             "They belong to categories like: Names, Countries, Organizations. ",
             "When used in a creative way, they become a powerful tool. They boost task like: Content Recommendation, Listing Tags. ",
-            "In the article, I show how to find Named Entities using, again, spaCy. "
+            "In the article, I show how to find Named Entities using spaCy. "
         ],
         "imgSrc": "https://miro.medium.com/max/3610/1*awG2b88LrXCvPwq0E_c2ug.png",
         "publishDate": "May 19, 2021",
@@ -49,10 +48,10 @@
     {
         "link": "https://kris-ograbek-nlp.medium.com/recognize-proactive-people-by-the-language-they-use-and-stick-with-them-c4075fe6e2cf",
         "title": "Recognize Proactive People By the Language They Use",
-        "subtitle": "Create your life",
+        "subtitle": "Be Proactive",
         "description": [
             "The first article I ever wrote. Originally, I posted it on LinkedIn in November 2020. ",
-            "This is still the only article about personal growth I decided to write. ",
+            "To this day, this is the only article about personal growth I wrote. ",
             "7 Habits of Highly Effective People is the most important book I read. ",
             "In the article, I'm giving personal insights about the first habit: Be proactive. "
         ],

@@ -12,6 +12,7 @@ import Header from './components/Header';
 import SidebarLeft from './components/SidebarLeft';
 import SidebarRight from './components/SidebarRight';
 import Container from '@mui/material/Container'
+import SwitchThemeMode from './components/SwitchThemeMode';
 
 const applyCommonTheme = theme => createTheme(theme, {
   typography: {
@@ -98,7 +99,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("Rerender")
     window.addEventListener("scroll", listenToScroll);
     return () =>
       window.removeEventListener("scroll", listenToScroll);
@@ -114,7 +114,7 @@ function App() {
               <Grid item xs={1}>
                 {showSidebar && !isMobile && < SidebarLeft />}
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={12} sm={10}>
                 <Content />
               </Grid>
               <Grid item xs={1}>
@@ -125,6 +125,7 @@ function App() {
           <Grid id="footer" container>
             <Footer />
           </Grid>
+          <SwitchThemeMode themeMode={themeMode} setThemeMode={setThemeMode} />
         </Grid>
       </Paper>
     </ThemeProvider >

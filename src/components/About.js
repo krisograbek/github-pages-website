@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 function AboutParagraph(props) {
   return (
-    <Grid item
+    <Grid item xs={8}
       pb={{ md: 0, lg: 2, xl: 3 }}
       pt={{ xs: 2, md: 3, lg: 0 }}
     >
@@ -64,7 +64,7 @@ function MyStory() {
           pl={{ md: 0, lg: 3 }}
         >
           <AboutParagraph>
-            <Typography>
+            <Typography maxWidth={{ sm: "100%", md: "80%", lg: "100%" }}>
               Welcome. My name is
               <Typography variant="spanBold"> Kris Ograbek</Typography>.
               OK, my real name is Krzysztof but people get very creative when it comes to misspelling it.
@@ -88,14 +88,12 @@ function MyStory() {
               In my 20's, learning was my unpleasant duty.
             </Typography>
             <Typography>
-              In my 30's, I discovered my passion for learning.
+              In my 30's, learning is my passion.
             </Typography>
           </AboutParagraph>
           <AboutParagraph>
-            <Typography>
+            <Typography maxWidth={{ sm: "100%", md: "80%", lg: "100%" }}>
               At the age of 32, I finally found my purpose. I want to learn and grow every day.
-            </Typography>
-            <Typography>
               I'm on the best journey of my life, the one that never ends.
               <Typography variant="span" color="text.secondary"> Lifelong Learning</Typography>.
               Join me!
@@ -133,9 +131,9 @@ function MyPromise() {
         </AboutParagraph>
         <AboutParagraph>
           <Typography>
-            You will find Machine Learning Projects created using
+            You will find Machine Learning Projects created with
             <Typography variant="span" color="text.secondary"> Python </Typography>
-            libraries for:
+            including libraries for:
           </Typography>
           <AboutContentList>
             - traditional<Typography variant="spanBold"> Machine Learning</Typography>:
@@ -146,13 +144,13 @@ function MyPromise() {
             <Typography variant="span" color="text.secondary"> TensorFlow and Pytorch</Typography>,
           </AboutContentList>
           <AboutContentList>
-            - <Typography variant="spanBold"> NLP: </Typography>
+            - <Typography variant="spanBold"> NLP</Typography>:
             <Typography variant="span" color="text.secondary"> Huggingface, SpaCy, Gensim, and NLTK</Typography>.
           </AboutContentList>
         </AboutParagraph>
         <AboutParagraph>
           <Typography>
-            You'll learn how to:
+            You can learn how to:
           </Typography>
           <AboutContentList >
             - build
@@ -161,8 +159,7 @@ function MyPromise() {
           </AboutContentList>
           <AboutContentList>
             - create Web Applications using
-            <Typography variant="span" color="text.secondary"> JavaScript and React </Typography>
-            for better interaction with models,
+            <Typography variant="span" color="text.secondary"> JavaScript and React</Typography>,
           </AboutContentList>
           <AboutContentList>
             - deploy models globally with
@@ -170,26 +167,23 @@ function MyPromise() {
           </AboutContentList>
         </AboutParagraph>
         <AboutParagraph>
-          <Typography>
+          <Typography maxWidth={{ sm: "100%", md: "80%", lg: "60%" }}>
             This website is the heart of my content creation.
-            Every time I'll publish something new on
+            Every time I'll publish something on
             <Link href="https://medium.com/@kris-ograbek-nlp"
               underline="hover"
               className={classes.link}
               target="_blank"
               rel="noreferrer"
             > Medium
-            </Link> or YouTube, this site will update.
-            {/* </Typography>
-          <Typography> */}
-            Every time I'll finish a noteworthy project on
+            </Link> or YouTube, this site will update. Every time I'll finish a noteworthy project on
             <Link href="https://github.com/krisograbek"
               underline="hover"
               className={classes.link}
               target="_blank"
               rel="noreferrer"
             > Github
-            </Link> or deploy a Machine Learning Project, you'll find it here.
+            </Link> you'll find it here.
           </Typography>
         </AboutParagraph>
       </Grid>

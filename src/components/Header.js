@@ -119,7 +119,7 @@ function Header() {
                   />
                 </Link>
               </Grid>
-              <Grid item xs={10}>
+              <Grid item xs={11} sm={10}>
                 <Typography variant="h6">
                   {isMobile ?
                     <MobileNavbar />

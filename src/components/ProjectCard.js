@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => {
       marginBottom: 16,
       borderTop: `1px solid ${theme.palette.text.primary}`,
       borderBottom: `1px solid ${theme.palette.text.primary}`,
-      // borderBottom: `1px solid ${theme.palette.primary.main}`,
     },
   })
 });

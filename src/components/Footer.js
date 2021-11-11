@@ -158,7 +158,8 @@ function Footer() {
     <Grid item xs={12}
       sx={{
         bgcolor: 'text.secondary',
-        color: 'background.default'
+        color: 'background.default',
+        zIndex: 1
       }}
     >
       <Container maxWidth="xl">

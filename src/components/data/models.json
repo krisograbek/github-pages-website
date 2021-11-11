@@ -22,9 +22,8 @@
         "videoLink": "videos/hotdog.mp4",
         "description": [
             "The second Full Stack Machine Learning project I built. This time I trained a Deep Learning model.",
-            "I wanted to take it one step further. ",
-            "It turned out to be several steps. Deploying Deep Learning models on Heroku is a different type of beast. ",
-            "I faced multiple memory issues. "
+            "Deploying it on Heroku turned out to be very challenging. ",
+            "I faced multiple memory issues. But it works. "
         ],
         "tags": ["machine learning", "full stack", "transfer learning"], 
         "techStack": "Python, JavaScript, Flask, React, Tensorflow, Keras, Heroku"
