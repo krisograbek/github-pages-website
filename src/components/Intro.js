@@ -37,7 +37,7 @@ function Intro() {
       </Grid>
       <Grid container borderLeft={4} mt={{ xs: 2, sm: 4, md: 8 }} py={1}>
         <Grid item xs={12}>
-          <Typography variant="h5" color="text.primary" pl={3} sx={{ fontStyle: 'italic' }}>
+          <Typography variant="h5" color="text.secondary" pl={3} sx={{ fontStyle: 'italic' }}>
             "An ounce of action is worth a ton of theory"
           </Typography>
         </Grid>
