@@ -44,7 +44,7 @@ function Content() {
         {sections.map((section) => {
           return (
             <Grid item
-              pt={{ xs: 10, sm: 10, md: 15 }}
+              pt={{ xs: 10, sm: 15, md: 20 }}
             // className={classes.contentSection}
             >
               {section}

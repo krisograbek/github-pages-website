@@ -1,49 +1,13 @@
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import React from 'react'
-import makeStyles from '@mui/styles/makeStyles'
+import Grid from '@mui/material/Grid';
+import React from 'react';
+import ContentSectionTitle from './ContentSectionTitle';
 import projects from "./data/models.json";
 import ProjectCard from './ProjectCard';
 
-const useStyles = makeStyles(({
-  item: {
-    // paddingTop: 64,
-    marginTop: 16,
-  }
-}))
-
-
 function Projects() {
-  const { item } = useStyles();
   return (
     <Grid id="projects" container>
-      <Grid item
-        className={item}
-        xs={12}
-      >
-        <Grid container
-          justifyContent="space-between"
-        >
-          <Grid
-            item xs={3}
-            alignSelf="center"
-            textAlign="right"
-          >
-            <hr />
-          </Grid>
-          <Grid item xs={6}>
-            <Typography variant="h4" component="h2" textAlign="center">
-              Projects
-            </Typography>
-          </Grid>
-          <Grid
-            item xs={3}
-            alignSelf="center"
-          >
-            <hr />
-          </Grid>
-        </Grid>
-      </Grid>
+      <ContentSectionTitle title="Projects" />
       <Grid item>
         <Grid container spacing={2}>
           {projects.map((project, id) => {
