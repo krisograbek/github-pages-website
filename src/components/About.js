@@ -133,7 +133,7 @@ function MyPromise() {
         </AboutParagraph>
         <AboutParagraph>
           <Typography>
-            You can expect to find Machine Learning Projects using
+            You will find Machine Learning Projects created using
             <Typography variant="span" color="text.secondary"> Python </Typography>
             libraries for:
           </Typography>
@@ -180,8 +180,8 @@ function MyPromise() {
               rel="noreferrer"
             > Medium
             </Link> or YouTube, this site will update.
-          </Typography>
-          <Typography>
+            {/* </Typography>
+          <Typography> */}
             Every time I'll finish a noteworthy project on
             <Link href="https://github.com/krisograbek"
               underline="hover"
