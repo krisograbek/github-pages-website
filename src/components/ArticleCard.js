@@ -41,11 +41,6 @@ const useStyles = makeStyles((theme) => {
       fontSize: [14, "!important"],
       border: 'solid 1px',
       borderRadius: 6,
-      // the next 3 lines are to test preffered tagging
-      // borderColor: theme.palette.text.secondary,
-      // backgroundColor: theme.palette.text.secondary,
-      // color: `${theme.palette.background.default} !important`,
-      // marginLeft: 16,
       padding: '2px 8px',
     },
     icon: {
