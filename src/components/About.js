@@ -170,13 +170,20 @@ function MyPromise() {
           <Typography maxWidth={{ sm: "100%", md: "80%", lg: "60%" }}>
             This website is the heart of my content creation.
             Every time I'll publish something on
+            <Link href="https://www.youtube.com/channel/UCyi_Df2NF35qjIV0LdtUY9w"
+              underline="hover"
+              className={classes.link}
+              target="_blank"
+              rel="noreferrer"
+            > YouTube
+            </Link> or
             <Link href="https://medium.com/@kris-ograbek-nlp"
               underline="hover"
               className={classes.link}
               target="_blank"
               rel="noreferrer"
             > Medium
-            </Link> or YouTube, this site will update. Every time I'll finish a noteworthy project on
+            </Link>, this site will update. Every time I'll finish a noteworthy project on
             <Link href="https://github.com/krisograbek"
               underline="hover"
               className={classes.link}

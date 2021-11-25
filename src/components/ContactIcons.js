@@ -3,6 +3,7 @@ import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import React from 'react';
 import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
+import FaYoutube from '@meronex/icons/fa/FaYoutube';
 import FaGithub from '@meronex/icons/fa/FaGithub';
 import FaHackerrank from '@meronex/icons/fa/FaHackerrank';
 import FaKaggle from '@meronex/icons/fa/FaKaggle';
@@ -47,6 +48,7 @@ const useStyles = makeStyles((theme) => {
 
 const links = [
   { "link": "https://www.linkedin.com/in/kris-ograbek-nlp/", "icon": FaLinkedin },
+  { "link": "https://www.youtube.com/channel/UCyi_Df2NF35qjIV0LdtUY9w", "icon": FaYoutube },
   { "link": "https://github.com/krisograbek", "icon": FaGithub },
   { "link": "https://medium.com/@kris-ograbek-nlp", "icon": FaMedium },
   { "link": "https://stackoverflow.com/users/15191870/krisograbek", "icon": FaStackOverflow },

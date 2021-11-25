@@ -2,6 +2,7 @@ import FaGithub from '@meronex/icons/fa/FaGithub';
 import FaHackerrank from '@meronex/icons/fa/FaHackerrank';
 import FaKaggle from '@meronex/icons/fa/FaKaggle';
 import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
+import FaYoutube from '@meronex/icons/fa/FaYoutube';
 import FaMedium from '@meronex/icons/fa/FaMedium';
 import FaStackOverflow from '@meronex/icons/fa/FaStackOverflow';
 import GoMail from '@meronex/icons/go/GoMail';
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => {
 const links = [
   { "link": "mailto:krzysztof.ograbek@gmail.com", "icon": GoMail, name: "Email" },
   { "link": "https://www.linkedin.com/in/kris-ograbek-nlp/", "icon": FaLinkedin, name: "LinkedIn" },
+  { "link": "https://www.youtube.com/channel/UCyi_Df2NF35qjIV0LdtUY9w", "icon": FaYoutube, name: "YouTube" },
   { "link": "https://github.com/krisograbek", "icon": FaGithub, name: "GitHub" },
   { "link": "https://medium.com/@kris-ograbek-nlp", "icon": FaMedium, name: "Medium" },
   { "link": "https://stackoverflow.com/users/15191870/krisograbek", "icon": FaStackOverflow, name: "StackOverflow" },
