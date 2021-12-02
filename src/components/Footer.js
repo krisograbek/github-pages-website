@@ -38,7 +38,7 @@ const links = [
   { "link": "https://www.linkedin.com/in/kris-ograbek-nlp/", "icon": FaLinkedin, name: "LinkedIn" },
   { "link": "https://www.youtube.com/channel/UCyi_Df2NF35qjIV0LdtUY9w", "icon": FaYoutube, name: "YouTube" },
   { "link": "https://github.com/krisograbek", "icon": FaGithub, name: "GitHub" },
-  { "link": "https://medium.com/@kris-ograbek-nlp", "icon": FaMedium, name: "Medium" },
+  { "link": "https://medium.com/@kris-ograbek", "icon": FaMedium, name: "Medium" },
   { "link": "https://stackoverflow.com/users/15191870/krisograbek", "icon": FaStackOverflow, name: "StackOverflow" },
   { "link": "https://www.hackerrank.com/krzysztof_ograb1", "icon": FaHackerrank, name: "HackerRank" },
   { "link": "https://www.kaggle.com/ograbekk", "icon": FaKaggle, name: "Kaggle" },

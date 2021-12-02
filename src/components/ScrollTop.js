@@ -29,7 +29,7 @@ function ScrollTop(props) {
         // alternative and probably more flexible solution
         // onClick={handleClick}
         role="presentation"
-        sx={{ position: 'fixed', bottom: 16, right: 16 }}
+        sx={{ position: 'fixed', bottom: 16, right: 16, zIndex: 2 }}
         component={Link}
         href="#home"
       >
