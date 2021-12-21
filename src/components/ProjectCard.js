@@ -1,19 +1,19 @@
+import FaGithub from '@meronex/icons/fa/FaGithub'
+import FiExternalLink from '@meronex/icons/fi/FiExternalLink'
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
-import Link from '@mui/material/Link'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import Grid from '@mui/material/Grid'
+import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import makeStyles from '@mui/styles/makeStyles'
 import React, { useState } from 'react'
-import FaGithub from '@meronex/icons/fa/FaGithub'
-import VscGlobe from '@meronex/icons/vsc/VscGlobe'
 
 
 const mapIcons = {
   "github": FaGithub,
-  "app": VscGlobe
+  "app": FiExternalLink
 }
 
 const useStyles = makeStyles((theme) => {

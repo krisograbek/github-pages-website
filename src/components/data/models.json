@@ -1,8 +1,39 @@
 [
     {
         "urls": {
-            "app": "https://iris-flask-react.herokuapp.com",
-            "github": "https://github.com/krisograbek/iris-fsml"
+            "github": "https://github.com/krisograbek/text-preprocessing-app",
+            "app": "https://krisograbek-text-toolbox.herokuapp.com/"
+        },
+        "title": "Text Preprocessing Toolbox",
+        "videoLink": "none",
+        "description": [
+            "This tool is for people who work a lot with text. It allows a quick text cleaning and normalization. ",
+            "It has easy and intuitive User Interface. ",
+            "You can remove HTML Tags, punctuation, numbers, URLs, emojis, or stopwords. You can normalize ",
+            "characters, correct spelling, lemmatize, and stem."
+        ],
+        "tags": ["full stack", "nlp", "text preprocessing"], 
+        "techStack": "Python, JavaScript, Flask, React, nltk, RegEx, Heroku"
+    },
+    {
+        "urls": {
+            "github": "https://github.com/krisograbek/hotdog",
+            "app": "https://krisograbek-hotdog.herokuapp.com"
+        },
+        "title": "Hot Dog Challenge",
+        "videoLink": "videos/hotdog.mp4",
+        "description": [
+            "The second Full Stack Machine Learning project I built. This time I trained a Deep Learning model. ",
+            "Deploying it on Heroku turned out to be very challenging. ",
+            "I faced multiple memory issues. I solved most of them using tf-lite. "
+        ],
+        "tags": ["machine learning", "full stack", "computer vision", "transfer learning"], 
+        "techStack": "Python, JavaScript, Flask, React, Tensorflow, Keras, Heroku"
+    },
+    {
+        "urls": {
+            "github": "https://github.com/krisograbek/iris-fsml",
+            "app": "https://iris-flask-react.herokuapp.com"
         },
         "title": "Full Stack Iris App",
         "videoLink": "videos/iris.mp4",
@@ -11,21 +42,6 @@
             "My goal was to connect all the dots required to make it work"
         ],
         "tags": ["machine learning", "full stack"], 
-        "techStack": "Python, JavaScript, Flask, React, Scikit-learn, Heroku"
-    },
-    {
-        "urls": {
-            "app": "https://krisograbek-hotdog.herokuapp.com",
-            "github": "https://github.com/krisograbek/hotdog"
-        },
-        "title": "Hot Dog Challenge",
-        "videoLink": "videos/hotdog.mp4",
-        "description": [
-            "The second Full Stack Machine Learning project I built. This time I trained a Deep Learning model.",
-            "Deploying it on Heroku turned out to be very challenging. ",
-            "I faced multiple memory issues. But it works. "
-        ],
-        "tags": ["machine learning", "full stack", "transfer learning"], 
-        "techStack": "Python, JavaScript, Flask, React, Tensorflow, Keras, Heroku"
+        "techStack": "Python, JavaScript, Flask, React, Scikit-learn, Numpy, Heroku"
     }
 ]

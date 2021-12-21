@@ -1,7 +1,7 @@
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import React from 'react'
-import makeStyles from '@mui/styles/makeStyles'
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import makeStyles from '@mui/styles/makeStyles';
+import React from 'react';
 
 const useStyles = makeStyles(({
   container: {

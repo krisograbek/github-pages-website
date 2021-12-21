@@ -5,7 +5,6 @@ import makeStyles from '@mui/styles/makeStyles'
 import React from 'react'
 import About from './About'
 import Blog from './Blog'
-import Others from './Others'
 import Intro from './Intro'
 import Projects from './Projects'
 import ScrollTop from './ScrollTop'
@@ -15,7 +14,6 @@ const sections = [
   <About />,
   <Projects />,
   <Blog />,
-  // <Others />
 ]
 
 const useStyles = makeStyles(({

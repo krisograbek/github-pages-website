@@ -1,17 +1,19 @@
 import grey from '@mui/material/colors/grey';
+import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
+import createTheme from '@mui/material/styles/createTheme';
+import responsiveFontSizes from '@mui/material/styles/responsiveFontSizes';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import makeStyles from '@mui/styles/makeStyles';
 import { useEffect, useState } from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import './App.css';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import SidebarLeft from './components/SidebarLeft';
 import SidebarRight from './components/SidebarRight';
-import Container from '@mui/material/Container'
 import SwitchThemeMode from './components/SwitchThemeMode';
 
 const applyCommonTheme = theme => createTheme(theme, {
