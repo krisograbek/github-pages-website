@@ -1,16 +1,14 @@
-import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import React from 'react';
-import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
-import FaYoutube from '@meronex/icons/fa/FaYoutube';
 import FaGithub from '@meronex/icons/fa/FaGithub';
 import FaHackerrank from '@meronex/icons/fa/FaHackerrank';
-import FaKaggle from '@meronex/icons/fa/FaKaggle';
+import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
 import FaMedium from '@meronex/icons/fa/FaMedium';
 import FaStackOverflow from '@meronex/icons/fa/FaStackOverflow';
-import FaReddit from '@meronex/icons/fa/FaReddit';
+import FaYoutube from '@meronex/icons/fa/FaYoutube';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
 import makeStyles from '@mui/styles/makeStyles';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => {
   const light = theme.palette.primary.light;
@@ -64,10 +62,7 @@ function ContactIcons() {
       {links.map((item, id) => {
         const Icon = item.icon;
         return (
-          <Grid
-            key={id}
-            item
-          >
+          <Grid key={id} item>
             <Link
               href={item.link}
               className={classes.link}

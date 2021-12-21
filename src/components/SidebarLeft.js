@@ -15,8 +15,6 @@ const useStyles = makeStyles((theme) => ({
   vline: {
     position: 'relative',
     height: '16px',
-    // paddingTop: '24px',
-    // borderLeft: 'solid 1px',
     left: '24px'
   }
 }));
@@ -29,7 +27,6 @@ function SidebarLeft() {
       direction="column"
       justifyContent="flex-end"
       alignContent="center"
-      // alignItems="stretch"
       className={classes.container}
     >
       <ContactIcons />

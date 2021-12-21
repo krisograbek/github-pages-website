@@ -1,24 +1,21 @@
+import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import React from 'react'
 import makeStyles from '@mui/styles/makeStyles'
+import React from 'react'
 import ContentSectionTitle from './ContentSectionTitle'
 
 
 const useStyles = makeStyles((theme) => ({
   link: {
-    // fontSize: 14,
     "&:hover": {
       color: theme.palette.primary.main,
     }
   },
   paragraph: {
-    // width: '90%',
     padding: '0 0 16px',
     [theme.breakpoints.down('lg')]: {
-      // textAlign: "center",
       padding: '32px 0 0',
     },
   },
@@ -43,7 +40,6 @@ function AboutContentList(props) {
     </Typography>
   )
 }
-
 
 function MyStory() {
   return (

@@ -1,7 +1,7 @@
-import Box from '@mui/material/Box'
-import Link from '@mui/material/Link'
-import useScrollTrigger from '@mui/material/useScrollTrigger'
-import Zoom from '@mui/material/Zoom'
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Zoom from '@mui/material/Zoom';
 
 function ScrollTop(props) {
   const { children } = props;
