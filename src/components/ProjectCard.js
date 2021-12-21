@@ -9,11 +9,12 @@ import makeStyles from '@mui/styles/makeStyles'
 import React, { useState } from 'react'
 import FaGithub from '@meronex/icons/fa/FaGithub'
 import VscGlobe from '@meronex/icons/vsc/VscGlobe'
+import FiExternalLink from '@meronex/icons/fi/FiExternalLink'
 
 
 const mapIcons = {
   "github": FaGithub,
-  "app": VscGlobe
+  "app": FiExternalLink
 }
 
 const useStyles = makeStyles((theme) => {
