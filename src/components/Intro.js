@@ -27,7 +27,7 @@ function Intro() {
         className={classes.paragraph}
       >
         <Typography variant="h3Big">
-          Machine Learning Content Creator
+          Content Creator
         </Typography>
       </Grid>
       <Grid item className={classes.paragraph}>
@@ -38,12 +38,14 @@ function Intro() {
       <Grid container borderLeft={4} mt={{ xs: 2, sm: 4, md: 8 }} py={1}>
         <Grid item xs={12}>
           <Typography variant="h5" color="text.secondary" pl={3} sx={{ fontStyle: 'italic' }}>
-            "An ounce of action is worth a ton of theory"
+            {/* "An ounce of action is worth a ton of theory" */}
+            "Knowledge is best applied through execution."
           </Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h5" pt={2} pl={3}>
-            - Friedrich Engels -
+            {/* - Friedrich Engels - */}
+            - Tiago Forte -
           </Typography>
         </Grid>
       </Grid>
